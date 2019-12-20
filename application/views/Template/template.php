@@ -48,7 +48,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	</nav>
 	<div id="navigation">
 		<ul>
-			<li><a href="<?php echo base_url('/sneakers') ?>">Fates-le test !</a></li>
+			<li><a href="<?php echo base_url('/sneakers') ?>">Faites-le test !</a></li>
 			<li><a href="">Blog </a></li>
 			<li><a href="">Qu'est ce que Mannaz ?</a></li>
 			<li><a href="">Développement personnel </a></li>
@@ -76,10 +76,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 </div>
 
 <!-- Footer -->
-<footer class="page-footer font-small unique-color-dark prem_footer">
 
-	<div style="background-color: #2F2F2F;">
-		<div class="container">
 
 			<!-- Grid row-->
 			<div class="row py-4 d-flex align-items-center">
@@ -117,11 +114,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 				<!-- Content -->
 				<h6 class="text-uppercase font-weight-bold">Mannaz</h6>
-				<p>Votre Solution de coaching.</p>
+				<p>Le changement naît de l'action.</p>
 
 			</div>
-			<!-- Grid column -->
-
 			<!-- Grid column -->
 			<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
 
