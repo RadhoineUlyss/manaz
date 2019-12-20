@@ -27,42 +27,65 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	}
 	?>
 </head>
+
 <!-- NE PAS TOUCHER EN HAUT -->
-<body>
+
 <header>
 	<!-- LA BARRE DE NAVIGATION DEBUT -->
+	<nav class="navbar navbar-expand-sm justify-content-center">
+		<div class="d-flex flex-row-reverse">
+
+		</div>
+		<div class="navbar-header">
+			<a class="navbar-brand" href="<?php echo base_url('') ?>"><img id="logotop" src="<?php echo base_url(); ?>assets/img/logo_mannaz_conseils.png"></a>
+		</div>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarCollapse">
+			<div class="d-flex flex-row-reverse">
+				<?php echo $navbar ?> <!-- $navbar correspond aux boutons présents à droite de la barre (ex : Se connecter ) -->
+			</div>
+		</div>
+	</nav>
 	<div id="navigation">
 		<ul>
-			<li><a href="<?php echo base_url('/sneakers') ?>"><i class="far fa-home-alt"></i></a></li>
-			<li><a href="">Faites le test !</a></li>
-			<li><a href="">Qu'est ce que Mannaz?</a></li>
+			<li><a href="<?php echo base_url('/sneakers') ?>">Faites-le test !</a></li>
+			<li><a href="">Blog</a></li>
+			<li><a href="">Qu'est ce que Mannaz ?</a></li>
 			<li><a href="">Développement personnel</a></li>
-			<li><a href="">Méthodologie</a></li>
+			<li><a href="">Méthodologie </a></li>
 		</ul>
 	</div>
+
 	<!-- LA BARRE DE NAVIGATION FIN -->
 </header>
 <br>
-<br>
-<br>
-	<!-- LA VUE DYNAMIQUE COMMENCE ICI -->
 <div id="video">
 	<img src="\assets\img\video.png" alt="issou">
 </div>
-<br>
-<!-- Footer -->
-<footer class="page-footer font-small unique-color-dark prem_footer">
+<div>
+	<?php
+	if ($this->session->flashdata('message')) {
+		echo '<div class="alert alert-success" id="success-alert">
+                <button type="button" class="close" data-dismiss="alert">x</button>
+                <strong>' . $this->session->flashdata('message') . '</strong>
+                </div>';
+	}
+	?>
+	<?php
+	if (isset($formulaire)) {
+		echo $formulaire;
+	}
+	?>
+	<!-- LA VUE DYNAMIQUE COMMENCE ICI -->
+	<div class="container"><?php echo $page; ?></div>
+</div>
 
-	<div style="background-color: #2F2F2F;">
-		<div class="container">
+<!-- Footer -->
 
 			<!-- Grid row-->
 			<div class="row py-4 d-flex align-items-center">
-
-				<!-- Grid column -->
-				<div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-					<h6 class="mb-0 whiteicon">Connectez-vous avec nous sur les réseaux sociaux !</h6>
-				</div>
 				<!-- Grid column -->
 
 				<!-- Grid column -->
@@ -83,6 +106,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 		</div>
 	</div>
+
 	<!-- Footer Links -->
 	<div class="container text-center text-md-left mt-5">
 
@@ -103,15 +127,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
 
 				<!-- Links -->
-				<h6 class="text-uppercase font-weight-bold">ongles 1</h6>
+				<h6 class="text-uppercase font-weight-bold">onglet 1</h6>
 				<p class="footerSecText">
-					<a href="<?php echo base_url('/sneakers') ?>">ongles 2</a>
+					<a href="<?php echo base_url('/sneakers') ?>">onglet 2</a>
 				</p>
 				<p class="footerSecText">
-					<a href="#!">ongles 3</a>
+					<a href="#!">onglet 3</a>
 				</p>
 				<p class="footerSecText">
-					<a href="#!">ongles 4</a>
+					<a href="#!">onglet 4</a>
 				</p>
 
 			</div>
@@ -126,7 +150,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<a href="#!">Liens 2</a>
 				</p>
 				<p class="footerSecText">
-					<a href="#!">Liens 3S</a>
+					<a href="#!">Liens 3</a>
 				</p>
 				<p class="footerSecText">
 					<a href="#!">Liens 4</a>
