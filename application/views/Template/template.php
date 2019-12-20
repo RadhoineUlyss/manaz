@@ -33,10 +33,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<!-- LA BARRE DE NAVIGATION DEBUT -->
 	<nav class="navbar navbar-expand-sm justify-content-center">
 		<div class="d-flex flex-row-reverse">
-			<form class="form-inline md-form form-sm mt-0">
-				<span onclick="DisplaySearchBar()"><i id="searchicon" class="fa fa-search fa-lg" aria-hidden="true"></i></span>
-				<input id="searchbar" class="form-control-sm" type="text" placeholder="Search" aria-label="Search">
-			</form>
 		</div>
 		<div class="navbar-header">
 			<a class="navbar-brand" href="<?php echo base_url('') ?>"><img id="logotop" src="<?php echo base_url(); ?>assets/img/logo_mannaz_conseils.png"></a>
