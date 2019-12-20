@@ -27,16 +27,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	}
 	?>
 </head>
+
 <!-- NE PAS TOUCHER EN HAUT -->
-<body>
+
 <header>
 	<!-- LA BARRE DE NAVIGATION DEBUT -->
 	<nav class="navbar navbar-expand-sm justify-content-center">
 		<div class="d-flex flex-row-reverse">
-			<form class="form-inline md-form form-sm mt-0">
-				<span onclick="DisplaySearchBar()"><i id="searchicon" class="fa fa-search fa-lg" aria-hidden="true"></i></span>
-				<input id="searchbar" class="form-control-sm" type="text" placeholder="Search" aria-label="Search">
-			</form>
+			
 		</div>
 		<div class="navbar-header">
 			<a class="navbar-brand" href="<?php echo base_url('') ?>"><img id="logotop" src="<?php echo base_url(); ?>assets/img/logo_mannaz_conseils.png"></a>
@@ -52,13 +50,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	</nav>
 	<div id="navigation">
 		<ul>
-			<li><a href="<?php echo base_url('/sneakers') ?>">Title</a></li>
-			<li><a href="">Title 1</a></li>
-			<li><a href="">Title 2</a></li>
-			<li><a href="">Title 3</a></li>
-			<li><a href="">Title 4</a></li>
+			<li><a href="<?php echo base_url('/sneakers') ?>">Faites-le test !</a></li>
+			<li><a href="">Blog</a></li>
+			<li><a href="">Qu'est ce que Mannaz ?</a></li>
+			<li><a href="">Développement personnel</a></li>
+			<li><a href="">Méthodologie </a></li>
 		</ul>
 	</div>
+	
 	<!-- LA BARRE DE NAVIGATION FIN -->
 </header>
 <div>
@@ -80,18 +79,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 </div>
 
 <!-- Footer -->
-<footer class="page-footer font-small unique-color-dark prem_footer">
-
-	<div style="background-color: #2F2F2F;">
-		<div class="container">
 
 			<!-- Grid row-->
 			<div class="row py-4 d-flex align-items-center">
-
-				<!-- Grid column -->
-				<div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-					<h6 class="mb-0 whiteicon">Connectez-vous avec nous sur les réseaux sociaux !</h6>
-				</div>
 				<!-- Grid column -->
 
 				<!-- Grid column -->
@@ -138,8 +128,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<a href="<?php echo base_url('/sneakers') ?>">onglet 2</a>
 				</p>
 				<p class="footerSecText">
-					<a href="#!">onglet 3</a
-				</p>
+					<a href="#!">onglet 3</a>
+				</p> 
 				<p class="footerSecText">
 					<a href="#!">onglet 4</a>
 				</p>
