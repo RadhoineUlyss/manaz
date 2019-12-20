@@ -55,6 +55,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			<li><a href="">Qu'est ce que Mannaz ?</a></li>
 			<li><a href="">Développement personnel</a></li>
 			<li><a href="">Méthodologie </a></li>
+			<li><a href="<?php echo base_url('/sneakers') ?>">Title</a></li>
+			<li><a href="">Title 1</a></li>
+			<li><a href="">Title 2</a></li>
+			<li><a href="">Title 3</a></li>
+			<li><a href="">Title 4</a></li>
 		</ul>
 	</div>
 
@@ -62,24 +67,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 </header>
 <br>
 <div id="video">
-	<img src="\assets\img\video.png" alt="issou">
-</div>
-<div>
-	<?php
-	if ($this->session->flashdata('message')) {
-		echo '<div class="alert alert-success" id="success-alert">
-                <button type="button" class="close" data-dismiss="alert">x</button>
-                <strong>' . $this->session->flashdata('message') . '</strong>
-                </div>';
-	}
-	?>
-	<?php
-	if (isset($formulaire)) {
-		echo $formulaire;
-	}
-	?>
-	<!-- LA VUE DYNAMIQUE COMMENCE ICI -->
-	<div class="container"><?php echo $page; ?></div>
+	<video controls>
+    <source src="\assets\img\video.png"
+            type="video/webm">
+    <source src="\assets\img\video.png"
+            type="video/mp4">
+    Sorry, your browser doesn't support embedded videos.
+</video>
 </div>
 
 <!-- Footer -->
