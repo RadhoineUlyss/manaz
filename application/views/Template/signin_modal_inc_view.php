@@ -54,7 +54,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<div class="form-group">
 						<label for="exampleFormControlSelect1">Exmple select</label>
 						<select class="form-control" id="exampleFormControlSelect1">
-							<option>t normal</option>
+							<option>client normal</option>
 							<option>Pro</option>
 							<option>PRO admin</option>
 						</select>
