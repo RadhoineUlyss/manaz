@@ -3,7 +3,8 @@ html {
     min-height: 100%;
 }
 #logotop{
-    max-height:70px;
+	max-height:80px;
+
 }
 .navbar-header {
     float: left;
@@ -11,16 +12,7 @@ html {
     width: 100%;
     margin-right:4%;
 }
-#searchicon{
-    margin-right:5%;
-    cursor:pointer;
-}
-#searchbar{
-    margin-left: 10px;
-    width: 100%;
-    border-radius: 20px;
-    visibility: hidden;
-}
+
 input:focus {
     outline:none !important;
 }
@@ -40,10 +32,13 @@ input:focus {
 }
 #navigation{
     background-color: #f8f9fa !important;
-    margin-bottom: 50px;
+	margin-bottom: 50px;
+
+
 }
 #navigation ul{
-    list-style: none;
+	list-style: none;
+	
 }
 #navigation ul li{
     float:left;

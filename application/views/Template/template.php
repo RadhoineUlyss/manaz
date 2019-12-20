@@ -27,8 +27,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	}
 	?>
 </head>
+
 <!-- NE PAS TOUCHER EN HAUT -->
-<body>
+
 <header>
 	<!-- LA BARRE DE NAVIGATION DEBUT -->
 	<nav class="navbar navbar-expand-sm justify-content-center">
@@ -55,6 +56,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			<li><a href="">Méthodologie </a></li>
 		</ul>
 	</div>
+	
 	<!-- LA BARRE DE NAVIGATION FIN -->
 </header>
 <div>
