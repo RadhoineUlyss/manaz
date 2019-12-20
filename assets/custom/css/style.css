@@ -1,10 +1,10 @@
-@@ -0,0 +1,177 @@
 html {
     position: relative;
     min-height: 100%;
 }
 #logotop{
-    max-height:70px;
+	max-height:80px;
+
 }
 .navbar-header {
     float: left;
@@ -12,6 +12,7 @@ html {
     width: 100%;
     margin-right:4%;
 }
+
 input:focus {
     outline:none !important;
 }
@@ -31,14 +32,9 @@ input:focus {
 }
 #navigation{
     background-color: #f8f9fa !important;
-    display: flex;
-    margin-bottom: 50px;
-    width: 100%;
-    justify-content: center;
-    top: 0;
-    align-items: center;
-    position: fixed;
-    z-index: 1;
+	margin-bottom: 50px;
+
+
 }
 #navigation ul{
     list-style: none;
@@ -98,13 +94,13 @@ input:focus {
 .footerSecText{
     font-size: 0.8em;
 }
-.modal-login:first-child {
+.modal-login:first-child {		
     color: #636363;
     width: 350px;
     float: left;
     margin-left: 23%;
 }
-.modal-login:last-child {
+.modal-login:last-child {		
     color: #636363;
     width: 350px;
     float: left;
@@ -116,7 +112,7 @@ input:focus {
     border: none;
 }
 .modal-login .modal-header {
-    border-bottom: none;
+    border-bottom: none;   
     position: relative;
     justify-content: center;
 }
@@ -129,13 +125,13 @@ input:focus {
 }
 .modal-login .form-control, .modal-login .btn {
     min-height: 40px;
-    border-radius: 3px;
+    border-radius: 3px; 
 }
 .modal-login .close {
     position: absolute;
     top: -5px;
     right: -5px;
-}
+}	
 .modal-login .modal-footer {
     background: #212121;
     border-color: #dee4e7;

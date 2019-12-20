@@ -34,7 +34,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<!-- LA BARRE DE NAVIGATION DEBUT -->
 	<nav class="navbar navbar-expand-sm justify-content-center">
 		<div class="d-flex flex-row-reverse">
-
 		</div>
 		<div class="navbar-header">
 			<a class="navbar-brand" href="<?php echo base_url('') ?>"><img id="logotop" src="<?php echo base_url(); ?>assets/img/logo_mannaz_conseils.png"></a>
@@ -112,11 +111,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 				<!-- Content -->
 				<h6 class="text-uppercase font-weight-bold">Mannaz</h6>
-				<p>Votre Solution de coaching.</p>
+				<p>Le changement naît de l'action.</p>
 
 			</div>
-			<!-- Grid column -->
-
 			<!-- Grid column -->
 			<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
 

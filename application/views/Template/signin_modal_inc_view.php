@@ -32,7 +32,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				</div>
 				<br>
 				<div class="modal-footer">
-					<a href="#inscriptionModal" data-toggle="modal">pas encore inscrit ?</a>
+					<a href="#inscriptionModal" data-toggle="modal">Pas encore inscrit ?</a>
 				</div>
 
 
@@ -52,9 +52,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					} ?>
 					<?php echo form_open('Test/inscription'); ?> <!-- FORMULAIRE INSCRIPTION DEBUT  -->
 					<div class="form-group">
-						<label for="exampleFormControlSelect1">Example select</label>
+						<label for="exampleFormControlSelect1">Exmple select</label>
 						<select class="form-control" id="exampleFormControlSelect1">
-							<option>User normal</option>
+							<option>t normal</option>
 							<option>Pro</option>
 							<option>PRO admin</option>
 						</select>
