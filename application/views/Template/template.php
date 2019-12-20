@@ -52,11 +52,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	</nav>
 	<div id="navigation">
 		<ul>
-			<li><a href="<?php echo base_url('/sneakers') ?>">Title</a></li>
-			<li><a href="">Title 1</a></li>
-			<li><a href="">Title 2</a></li>
-			<li><a href="">Title 3</a></li>
-			<li><a href="">Title 4</a></li>
+			<li><a href="<?php echo base_url('/sneakers') ?>">Fates-le test !</a></li>
+			<li><a href="">Blog </a></li>
+			<li><a href="">Qu'est ce que Mannaz ?</a></li>
+			<li><a href="">Développement personnel </a></li>
+			<li><a href="">Méthodologie </a></li>
 		</ul>
 	</div>
 	<!-- LA BARRE DE NAVIGATION FIN -->
@@ -89,9 +89,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			<div class="row py-4 d-flex align-items-center">
 
 				<!-- Grid column -->
-				<div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-					<h6 class="mb-0 whiteicon">Connectez-vous avec nous sur les réseaux sociaux !</h6>
-				</div>
 				<!-- Grid column -->
 
 				<!-- Grid column -->
@@ -138,7 +135,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<a href="<?php echo base_url('/sneakers') ?>">onglet 2</a>
 				</p>
 				<p class="footerSecText">
-					<a href="#!">onglet 3</a
+					<a href="#!">onglet 3</a>
 				</p>
 				<p class="footerSecText">
 					<a href="#!">onglet 4</a>
