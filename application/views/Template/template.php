@@ -207,7 +207,7 @@ if ($script != '') {
 
 <?php
 if ($this->session->flashdata('error_ins')) {
-	echo "<script>$('#myModal2').modal('show');</script>";
+	echo "<script>$('#inscriptionModal').modal('show');</script>";
 } else {
 	if ($this->session->flashdata('error_ident')) {
 		echo "<script>$('#myModal').modal('show');</script>";
@@ -216,3 +216,4 @@ if ($this->session->flashdata('error_ins')) {
 ?>
 </body>
 </html>
+

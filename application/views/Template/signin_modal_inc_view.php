@@ -50,10 +50,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					} ?>
 					<?php echo form_open('Test/inscription'); ?> <!-- FORMULAIRE INSCRIPTION DEBUT  -->
 					<div class="form-group">
-						<label for="exampleFormControlSelect1">Example select</label>
-						<select class="form-control" id="exampleFormControlSelect1">
-							<option value="1">User normal</option>
-							<option value="2">Pro</option>
+						<label for="SelectType">Example select</label>
+						<select class="form-control" id="SelectType" name="type_compte" required>
+							<option value="" SELECTED>Vous êtes ?</option>
+							<option value="1">Je suis un particulier</option>
+							<option value="2">Je suis professionnel</option>
 						</select>
 					</div>
 					<div class="form-group">
@@ -70,7 +71,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					</div>
 					<div class="form-group">
 						<?php echo form_error('tel', '<span class="error">', '</span>'); ?>
-						<input type="text" class="form-control" name="tel" placeholder="Tel" required>
+						<input type="number" class="form-control" name="tel" placeholder="Tel" required>
 					</div>
 					<div class="form-group">
 						<?php echo form_error('adress', '<span class="error">', '</span>'); ?>
@@ -81,8 +82,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 						<input type="password" class="form-control" name="password" placeholder="Mot de passe" required>
 					</div>
 					<div class="form-group">
-						<?php echo form_error('password', '<span class="error">', '</span>'); ?>
-						<input type="password" class="form-control" name="password" placeholder="Mot de passe verif" required="required">
+						<?php echo form_error('password_confirm', '<span class="error">', '</span>'); ?>
+						<input type="password" class="form-control" name="password" placeholder="Mot de passe verification" required>
 					</div>
 					<div class="form-group">
 						<button type="submit" class="btn btn-primary btn-lg btn-block login-btn">S'inscrire</button>
@@ -94,3 +95,4 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	</div>
 </div>
 </div>
+

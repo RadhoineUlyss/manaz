@@ -73,7 +73,7 @@ class Profil extends CI_Controller
 		$this->form_validation->set_message('is_unique', 'L\'email est déjà utilisé');
 		$this->form_validation->set_message('valid_email', 'L\'adresse email doit être valide');
 
-		$this->form_validation->set_rules('email', 'Email', 'trim|valid_email|is_unique[membres.email]|required');
+		$this->form_validation->set_rules('email', 'Email', 'trim|valid_email|is_unique[user.email]|required');
 
 		if ($this->form_validation->run()) {
 			$data = $this->input->post();
