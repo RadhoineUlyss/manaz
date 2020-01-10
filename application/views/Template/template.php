@@ -34,14 +34,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<!-- LA BARRE DE NAVIGATION DEBUT -->
 	<div id="navigation">
 		<ul>
-			<li><a href="<?php echo base_url('') ?>"><img id="logotop" src="<?php echo base_url(); ?>assets/img/mannaz-11.png"></a></li>
+			<li><a href="<?php echo base_url('') ?>"><img style="height: 10px; width: 10px;"DX id="logotop" src="<?php echo base_url(); ?>assets/img/mannaz-11.png"></a></li>
 			<li><a href="<?php echo base_url('') ?>"><img id="home" src="<?php echo base_url(); ?>assets/img/Home.svg"><img id="acc" src="<?php echo base_url(); ?>assets/img/Accueil.svg"></a></li>
 			<li><a href="">Blog</a></li>
 			<li><a href="">Qu'est ce que Mannaz ?</a></li>
 			<li><a href="">Développement personnel</a></li>
 			<li><a href="">Méthodologie</a></li>
-				<li><a href="<?php echo base_url('') ?>"><img id="f" src="<?php echo base_url(); ?>assets/img/f.svg"><img id="i" src="<?php echo base_url(); ?>assets/img/i.svg"><img id="in" src="<?php echo base_url(); ?>assets/img/in.svg"></a></li>
-			<li><a href="<?php echo base_url('') ?>"><img id="rec" src="<?php echo base_url(); ?>assets/img/Rectangle_1.svg"><img id="con" src="<?php echo base_url(); ?>assets/img/Connexion.svg"></a></li>
+			<li><a href="<?php echo base_url('') ?>"><img id="f" src="<?php echo base_url(); ?>assets/img/f.svg"><img id="i" src="<?php echo base_url(); ?>assets/img/i.svg"><img id="in" src="<?php echo base_url(); ?>assets/img/in.svg"></a></li>
+			<li><a href="<?php echo base_url('') ?>"></a></li>
 		</ul>
 	</div>
 
@@ -59,6 +59,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <div id="thema">
 	<p id="thema_1">Différentes thématiques que nous pourrions aborder ensemble</p>
 	<p ip="thema_2">Survolez les illustrations</p>
+	<div id="thema_img">
+		<img id="i4"src="<?php echo base_url(); ?>assets/img/4.png" alt="homme qui baille">
+		<p>Vos émotions vous submergent facilemnt...</p>
+		<img id="i5"src="<?php echo base_url(); ?>assets/img/5.png" alt="homme qui baille">
+		<p>Atteint d'une maladie vous avez besoin de parler...</p>
+		<img id="i6"src="<?php echo base_url(); ?>assets/img/6.png" alt="homme qui baille">
+		<p>Vous êtes bleu et c'est difficile dans la vie de tous les jours...</p>
+		<img id="i7"src="<?php echo base_url(); ?>assets/img/7.png" alt="homme qui baille">
+	</div>
 </div>
 <!-- Footer -->
 
@@ -95,72 +104,26 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			<div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
 
 				<!-- Content -->
-				<h6 class="text-uppercase font-weight-bold">Mannaz</h6>
-				<p>Le changement naît de l'action.</p>
+				<h6 class="text-uppercase font-weight-bold">Pour plus d'informations, contactez nous</h6>
+				<p><i class="fa fa-phone mr-3"></i>+33(0) 6 18  27 67 58</p>
+				<p><i class="fa fa-envelope mr-3"></i>mannaz@gmail.com</p>
+				<br>
+				<br>
+				<div class="footer-copyright text-center py-3 sec_footer">
+				© 2019 Copyright: <a href="<?php echo base_url('') ?>"> Mannaz.fr</a>
+				</div>
+
 
 			</div>
-			<!-- Grid column -->
 			<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-
-				<!-- Links -->
-				<h6 class="text-uppercase font-weight-bold">onglet 1</h6>
-				<p class="footerSecText">
-					<a href="<?php echo base_url('/sneakers') ?>">onglet 2</a>
-				</p>
-				<p class="footerSecText">
-					<a href="#!">onglet 3</a>
-				</p>
-				<p class="footerSecText">
-					<a href="#!">onglet 4</a>
-				</p>
-
+			<br>
+			<br>
+			<br>
+			<br>
+			<input id="legal" type="button" value="Mentions légales">
 			</div>
-			<!-- Grid column -->
-
-			<!-- Grid column -->
-			<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-
-				<!-- Links -->
-				<h6 class="text-uppercase font-weight-bold">Liens 1</h6>
-				<p class="footerSecText">
-					<a href="#!">Liens 2</a>
-				</p>
-				<p class="footerSecText">
-					<a href="#!">Liens 3</a>
-				</p>
-				<p class="footerSecText">
-					<a href="#!">Liens 4</a>
-				</p>
-
-			</div>
-			<!-- Grid column -->
-
-			<!-- Grid column -->
-			<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-
-				<!-- Links -->
-				<h6 class="text-uppercase font-weight-bold">Contact</h6>
-				<p>
-					<i class="fa fa-home mr-3"></i> Aix-En-Provence 13090 FR</p>
-				<p>
-					<i class="fa fa-envelope mr-3"></i> hello@mannaz.com</p>
-				<p>
-					<i class="fa fa-phone mr-3"></i> + 33 11 11 11 11</p>
-
-			</div>
-			<!-- Grid column -->
-
 		</div>
-		<!-- Grid row -->
-
 	</div>
-	<!-- Footer Links -->
-
-	<!-- Copyright -->
-	<div class="footer-copyright text-center py-3 sec_footer">© 2019 Copyright: <a href="<?php echo base_url('') ?>"> Mannaz.fr</a>
-	</div>
-	<!-- Copyright -->
-
 </footer>
 <!-- Footer -->
 <!-- NE PAS TOUCHER EN BAS -->
