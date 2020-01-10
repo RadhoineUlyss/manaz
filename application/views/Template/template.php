@@ -15,7 +15,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<!-- Font -->
 	<link type="text/css" href="http://fonts.googleapis.com/css?family=Lato:300,700"/>
 	<!-- FavIcon -->
-	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url(); ?>assets/favicon/favicon.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url(); ?>assets/favicon/mannaz-12.png">
 	<link rel="manifest" href="<?php echo base_url(); ?>assets/favicon/manifest.json">
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="<?php echo base_url(); ?>assets/favicon/ms-icon-144x144.png">
@@ -36,7 +36,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		<div class="d-flex flex-row-reverse">
 		</div>
 		<div class="navbar-header">
-			<a class="navbar-brand" href="<?php echo base_url('') ?>"><img id="logotop" src="<?php echo base_url(); ?>assets/img/logo_mannaz_conseils.png"></a>
+			<a class="navbar-brand" href="<?php echo base_url('') ?>"><img id="logotop" src="<?php echo base_url(); ?>assets/img/mannaz-11.png"></a>
 		</div>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
