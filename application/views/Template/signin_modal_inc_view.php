@@ -30,7 +30,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				</div>
 				<br>
 				<div class="modal-footer">
-					<a href="#inscriptionModal" data-toggle="modal">pas encore inscrit ?</a>
+					<a href="#inscriptionModal" data-toggle="modal">Pas encore inscrit ?</a>
 				</div>
 			</div>
 		</div>

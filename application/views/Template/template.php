@@ -15,7 +15,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<!-- Font -->
 	<link type="text/css" href="http://fonts.googleapis.com/css?family=Lato:300,700"/>
 	<!-- FavIcon -->
-	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url(); ?>assets/favicon/favicon.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url(); ?>assets/favicon/mannaz-12.png">
 	<link rel="manifest" href="<?php echo base_url(); ?>assets/favicon/manifest.json">
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="<?php echo base_url(); ?>assets/favicon/ms-icon-144x144.png">
@@ -27,71 +27,45 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	}
 	?>
 </head>
+
 <!-- NE PAS TOUCHER EN HAUT -->
-<body>
+
 <header>
 	<!-- LA BARRE DE NAVIGATION DEBUT -->
-	<nav class="navbar navbar-expand-sm justify-content-center">
-		<div class="d-flex flex-row-reverse">
-			<form class="form-inline md-form form-sm mt-0">
-				<span onclick="DisplaySearchBar()"><i id="searchicon" class="fa fa-search fa-lg" aria-hidden="true"></i></span>
-				<input id="searchbar" class="form-control-sm" type="text" placeholder="Search" aria-label="Search">
-			</form>
-		</div>
-		<div class="navbar-header">
-			<a class="navbar-brand" href="<?php echo base_url('') ?>"><img id="logotop" src="<?php echo base_url(); ?>assets/img/logo_mannaz_conseils.png"></a>
-		</div>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarCollapse">
-			<div class="d-flex flex-row-reverse">
-				<?php echo $navbar ?> <!-- $navbar correspond aux boutons présents à droite de la barre (ex : Se connecter ) -->
-			</div>
-		</div>
-	</nav>
 	<div id="navigation">
 		<ul>
-			<li><a href="<?php echo base_url('/sneakers') ?>">Title</a></li>
-			<li><a href="">Title 1</a></li>
-			<li><a href="">Title 2</a></li>
-			<li><a href="">Title 3</a></li>
-			<li><a href="">Title 4</a></li>
+			<li><a href="<?php echo base_url('') ?>"><img id="logotop" src="<?php echo base_url(); ?>assets/img/mannaz-11.png"></a></li>
+			<li><a href="<?php echo base_url('') ?>"><a style="color:#FF8F71" href="">Accueil</a></li>
+			<li><a style="margin-right:20px"href="">Développement personnel</a></li>
+			<li><a style="margin-right:20px"href="">Qu'est ce que Mannaz ?</a></li>
+			<li><a style="margin-right:20px"href="">Mon approche</a></li>
+			<li><a style="margin-right:20px"href="">Blog</a></li>
+			<li><a href="<?php echo base_url('') ?>"><img style="height: 15px; width: 15px;"id="i" src="<?php echo base_url(); ?>assets/img/i.svg"><img style="height: 15px; width: 15px; margin-left: 18px" id="f" src="<?php echo base_url(); ?>assets/img/f.svg"><img style="height: 22px; width: 22px; margin-left: 18px"id="in" src="<?php echo base_url(); ?>assets/img/in.svg"></a></li>
+			<li><input id="connexion" type="button" value="Connexion">
+            
+
 		</ul>
 	</div>
+
 	<!-- LA BARRE DE NAVIGATION FIN -->
 </header>
-<div>
-	<?php
-	if ($this->session->flashdata('message')) {
-		echo '<div class="alert alert-success" id="success-alert">
-                <button type="button" class="close" data-dismiss="alert">x</button>
-                <strong>' . $this->session->flashdata('message') . '</strong>
-                </div>';
-	}
-	?>
-	<?php
-	if (isset($formulaire)) {
-		echo $formulaire;
-	}
-	?>
-	<!-- LA VUE DYNAMIQUE COMMENCE ICI -->
-	<div class="container"><?php echo $page; ?></div>
+<div id="video">
+	<video controls>
+    <source src="\assets\img\video.png"
+            type="video/webm">
+    <source src="\assets\img\video.png"
+            type="video/mp4">
+    Sorry, your browser doesn't support embedded videos.
+</video>
 </div>
-
+<div id="thema">
+	<p id="thema_1">Différentes thématiques que nous pourrions aborder ensemble</p>
+	<p ip="thema_2">Survolez les illustrations</p>
+</div>
 <!-- Footer -->
-<footer class="page-footer font-small unique-color-dark prem_footer">
-
-	<div style="background-color: #2F2F2F;">
-		<div class="container">
 
 			<!-- Grid row-->
 			<div class="row py-4 d-flex align-items-center">
-
-				<!-- Grid column -->
-				<div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-					<h6 class="mb-0 whiteicon">Connectez-vous avec nous sur les réseaux sociaux !</h6>
-				</div>
 				<!-- Grid column -->
 
 				<!-- Grid column -->
@@ -124,24 +98,22 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 				<!-- Content -->
 				<h6 class="text-uppercase font-weight-bold">Mannaz</h6>
-				<p>Votre Solution de coaching.</p>
+				<p>L'équilibre naît de l'action.</p>
 
 			</div>
-			<!-- Grid column -->
-
 			<!-- Grid column -->
 			<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
 
 				<!-- Links -->
-				<h6 class="text-uppercase font-weight-bold">ongles 1</h6>
+				<h6 class="text-uppercase font-weight-bold">onglet 1</h6>
 				<p class="footerSecText">
-					<a href="<?php echo base_url('/sneakers') ?>">ongles 2</a>
+					<a href="<?php echo base_url('/sneakers') ?>">onglet 2</a>
 				</p>
 				<p class="footerSecText">
-					<a href="#!">ongles 3</a
+					<a href="#!">onglet 3</a>
 				</p>
 				<p class="footerSecText">
-					<a href="#!">ongles 4</a>
+					<a href="#!">onglet 4</a>
 				</p>
 
 			</div>
@@ -156,7 +128,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<a href="#!">Liens 2</a>
 				</p>
 				<p class="footerSecText">
-					<a href="#!">Liens 3S</a>
+					<a href="#!">Liens 3</a>
 				</p>
 				<p class="footerSecText">
 					<a href="#!">Liens 4</a>
