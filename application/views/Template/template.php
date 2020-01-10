@@ -15,7 +15,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<!-- Font -->
 	<link type="text/css" href="http://fonts.googleapis.com/css?family=Lato:300,700"/>
 	<!-- FavIcon -->
+<<<<<<< HEAD
 	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url(); ?>assets/favicon/mannaz-12.png">
+=======
+	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url(); ?>assets/favicon/mannaz_favicon.png">
+>>>>>>> Victor
 	<link rel="manifest" href="<?php echo base_url(); ?>assets/favicon/manifest.json">
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="<?php echo base_url(); ?>assets/favicon/ms-icon-144x144.png">
@@ -32,6 +36,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 <header>
 	<!-- LA BARRE DE NAVIGATION DEBUT -->
+<<<<<<< HEAD
 	<nav class="navbar navbar-expand-sm justify-content-center">
 		<div class="d-flex flex-row-reverse">
 		</div>
@@ -47,43 +52,38 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			</div>
 		</div>
 	</nav>
+=======
+>>>>>>> Victor
 	<div id="navigation">
 		<ul>
-			<li><a href="<?php echo base_url('/sneakers') ?>">Faites-le test !</a></li>
-			<li><a href="">Blog </a></li>
+			<li><a href="<?php echo base_url('') ?>"><img id="logotop" src="<?php echo base_url(); ?>assets/img/logo_mannaz_conseils.png"></a></li>
+			<li><a href="<?php echo base_url('') ?>"><img id="home" src="<?php echo base_url(); ?>assets/img/Home.svg"><img id="acc" src="<?php echo base_url(); ?>assets/img/Acceuil.svg"></a></li>
+			<li><a href="">Blog</a></li>
 			<li><a href="">Qu'est ce que Mannaz ?</a></li>
-			<li><a href="">Développement personnel </a></li>
-			<li><a href="">Méthodologie </a></li>
+			<li><a href="">Développement personnel</a></li>
+			<li><a href="">Méthodologie</a></li>
+				<li><a href="<?php echo base_url('') ?>"><img id="f" src="<?php echo base_url(); ?>assets/img/f.svg"><img id="i" src="<?php echo base_url(); ?>assets/img/i.svg"><img id="in" src="<?php echo base_url(); ?>assets/img/in.svg"></a></li>
+			<li><a href="<?php echo base_url('') ?>"><img id="rec" src="<?php echo base_url(); ?>assets/img/rectangle_1.svg"><img id="con" src="<?php echo base_url(); ?>assets/img/Connexion.svg"></a></li>
 		</ul>
 	</div>
-	
+
 	<!-- LA BARRE DE NAVIGATION FIN -->
 </header>
-<div>
-	<?php
-	if ($this->session->flashdata('message')) {
-		echo '<div class="alert alert-success" id="success-alert">
-                <button type="button" class="close" data-dismiss="alert">x</button>
-                <strong>' . $this->session->flashdata('message') . '</strong>
-                </div>';
-	}
-	?>
-	<?php
-	if (isset($formulaire)) {
-		echo $formulaire;
-	}
-	?>
-	<!-- LA VUE DYNAMIQUE COMMENCE ICI -->
-	<div class="container"><?php echo $page; ?></div>
+<br>
+<div id="video">
+	<video controls>
+    <source src="\assets\img\video.png"
+            type="video/webm">
+    <source src="\assets\img\video.png"
+            type="video/mp4">
+    Sorry, your browser doesn't support embedded videos.
+</video>
 </div>
 
 <!-- Footer -->
 
-
 			<!-- Grid row-->
 			<div class="row py-4 d-flex align-items-center">
-
-				<!-- Grid column -->
 				<!-- Grid column -->
 
 				<!-- Grid column -->
