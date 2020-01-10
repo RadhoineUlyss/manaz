@@ -78,14 +78,14 @@ class Test extends CI_Controller
 	{
 		$this->load->model('connection_model');
 
-		$this->form_validation->set_rules('username', 'Pseudo', 'trim|required');
+		$this->form_validation->set_rules('email', 'Pseudo', 'trim|required');
 		$this->form_validation->set_rules('password', 'Mot de passe', 'trim|required');
 
 		if ($this->form_validation->run()) {
-			if ($this->connection_model->check_id($this->input->post('username'), $this->input->post('password'))) {
+			if ($this->connection_model->check_id($this->input->post('email'), $this->input->post('password'))) {
 
 				$data = [
-					'login'  => $this->input->post('username'),
+					'login'  => $this->input->post('email'),
 					'logged' => true
 				];
 
@@ -94,6 +94,8 @@ class Test extends CI_Controller
 			} else {
 				$this->session->set_flashdata('error_ident', 'Mauvais identifiants');
 			}
+		} else {
+			$this->session->set_flashdata('error_ident', 'Mauvais identifiants');
 		}
 		redirect($this->session->flashdata('current_url'));
 		//$this->dynamic_navbar->verification(); sauvegarde le cache formulaire

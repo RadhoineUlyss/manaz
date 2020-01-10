@@ -9,6 +9,8 @@ class connection_model extends CI_Model
 		$this->db->where('Mail_User', $mail);
 		$this->db->where('Password_User', sha1($pass));
 		$q = $this->db->get('user');
+
+
 		if ($q->num_rows() > 0) {
 			$this->db->where('Mail_User', $mail);
 
@@ -25,7 +27,7 @@ class connection_model extends CI_Model
 		$query = $this->db->get('user');
 		$data  = $query->first_row();
 
-		return $data->id;
+		return $data->Id_User;
 	}
 
 	public function getData($mail)
