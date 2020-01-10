@@ -34,8 +34,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<div class="modal-footer">
 					<a href="#inscriptionModal" data-toggle="modal">pas encore inscrit ?</a>
 				</div>
-
-
 			</div>
 		</div>
 	</div>
@@ -54,9 +52,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<div class="form-group">
 						<label for="exampleFormControlSelect1">Example select</label>
 						<select class="form-control" id="exampleFormControlSelect1">
-							<option>User normal</option>
-							<option>Pro</option>
-							<option>PRO admin</option>
+							<option value="1">User normal</option>
+							<option value="2">Pro</option>
 						</select>
 					</div>
 					<div class="form-group">
