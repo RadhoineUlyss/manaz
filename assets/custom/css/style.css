@@ -32,7 +32,7 @@ input:focus {
     margin-right: 2%;
 }
 #navigation{
-    background-color: #f8f9fa !important;
+    background-color: white !important;
 	position:fixed;
     width: 100%;
     top: 0;
@@ -52,7 +52,7 @@ input:focus {
     float: left;
     display: block;
     color: #f2f2f2;
-    text-align: center;
+   
     padding: 6px 12px;
     text-decoration: none;
     font-size: 17px;
@@ -61,12 +61,15 @@ input:focus {
 	margin-bottom:20px;
 }
 #navigation ul li:first-child{
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 0%;
+	margin-right: 0%;
+	text-align: center;
 }
 #navigation ul li:nth-child(2){
     margin-left: 2%;
-    margin-right: 2%;
+	margin-right: 2%;
+	text-align: center;
+	margin-bottom: 3%;
 }
 #navigation ul li:nth-child(3){
     margin-left: 2%;
