@@ -38,7 +38,7 @@ input:focus {
     top: 0;
     text-align: center;
 	overflow: hidden;
-	height: 2.0em;
+	
 }
 #navigation ul{
     list-style: none;
