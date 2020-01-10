@@ -33,11 +33,12 @@ input:focus {
 #navigation{
     background-color: #f8f9fa !important;
 	margin-bottom: 50px;
-	position:fixed;
+	position: fixed;
     width: 100%;
     top: 0;
     text-align: center;
-    overflow: hidden;
+	overflow: hidden;
+	height: 2.0em;
 }
 #navigation ul{
     list-style: none;
@@ -82,19 +83,11 @@ input:focus {
 }
 
 #video video{
-<<<<<<< HEAD
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 40%;
   border-radius: 12px;
-=======
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    height: 50%;
->>>>>>> Victor
 }
 .footer {
     text-align: center;
