@@ -47,7 +47,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 	<!-- LA BARRE DE NAVIGATION FIN -->
 </header>
-<br>
 <div id="video">
 	<video controls>
     <source src="\assets\img\video.png"
@@ -57,7 +56,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
     Sorry, your browser doesn't support embedded videos.
 </video>
 </div>
-
+<div id="thema">
+	<p id="thema_1">Différentes thématiques que nous pourrions aborder ensemble</p>
+	<p ip="thema_2">Survolez les illustrations</p>
+</div>
 <!-- Footer -->
 
 			<!-- Grid row-->
