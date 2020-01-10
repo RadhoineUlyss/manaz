@@ -36,28 +36,18 @@ class Test extends CI_Controller
 		$this->load->model('inscription_model');
 
 
-		$this->form_validation->set_rules('nom', 'Nom', 'trim|required',
-			[
-				'required' => 'Nom obligatoire'
-			]
-		);
-		$this->form_validation->set_rules('prenom', 'Prénom', 'trim|required',
-			[
-				'required' => 'Prénom obligatoire'
-			]);
+		$this->form_validation->set_rules('nom', 'Nom', 'trim|required');
+		$this->form_validation->set_rules('prenom', 'Prénom', 'trim|required');
 		$this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|is_unique[user.Mail_User]',
 			[
-				'required'    => 'Email obligatoire',
 				'is_unique'   => 'L\'email est déjà utilisé',
 				'valid_email' => 'L\'adresse email doit être valide'
 			]);
 		$this->form_validation->set_rules('tel', 'tel', 'trim|required|is_unique[user.Telephone_User]',
 			[
-				'required'    => 'Tel obligatoire',
-				'is_unique'   => 'L\'email est déjà utilisé',
-				'valid_email' => 'L\'adresse email doit être valide'
+				'is_unique' => 'Le numero de telephone est déjà utilisé',
 			]);
-		$this->form_validation->set_rules('adress', 'adress', 'trim|required|min_length[5]');
+		$this->form_validation->set_rules('adresse', 'adresse', 'trim|required|min_length[5]');
 		$this->form_validation->set_rules('password', 'Mot de passe', 'trim|required|min_length[5]');
 		$this->form_validation->set_rules('password_confirm', 'Mot de passe confirmation', 'required|matches[password]');
 
@@ -68,7 +58,7 @@ class Test extends CI_Controller
 				'Prenom_User'           => $this->input->post('prenom'),
 				'Mail_User'             => $this->input->post('email'),
 				'Telephone_User'        => $this->input->post('tel'),
-				'Adresse_User'          => $this->input->post('adress'),
+				'Adresse_User'          => $this->input->post('adresse'),
 				'Password_User'         => sha1($this->input->post('password')),
 				'Date_Inscription_User' => date("Y-m-d"),
 			];
@@ -76,14 +66,11 @@ class Test extends CI_Controller
 			$this->inscription_model->signup($data);
 
 			$this->session->set_flashdata('message', 'Inscription réussie');
-			$data['success'] = true;
 		} else {
 			$this->session->set_flashdata('error_ins', '<strong>Erreur d\'inscription : </strong>'
 				. validation_errors());
-			$data['success'] = false;
 		}
-		$this->session->set_flashdata('current_url', current_url());
-		$page = $this->load->view('accueil_view', $data, true);
+		$page = $this->load->view('accueil_view', '', true);
 		$this->dynamic_navbar->verification($page, '', 'accueil_style');
 	}
 

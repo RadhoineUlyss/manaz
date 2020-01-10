@@ -7,12 +7,6 @@ class inscription_model extends CI_Model
 	function signup($data)
 	{
 		$this->db->insert('user', $data);
-
-		$address_data = [
-			'membre_id' => $this->db->insert_id()
-		];
-
-		$this->db->insert('adresse', $address_data);
 	}
 
 	function check_pseudo($pseudo)

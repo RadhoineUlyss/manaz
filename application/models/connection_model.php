@@ -4,42 +4,42 @@
 
 class connection_model extends CI_Model
 {
-	public function check_id($pseudo, $pass)
+	public function check_id($mail, $pass)
 	{
-		$this->db->where('username', $pseudo);
-		$this->db->where('password', sha1($pass));
+		$this->db->where('Mail_User', $mail);
+		$this->db->where('Password_User', sha1($pass));
 		$q = $this->db->get('user');
 		if ($q->num_rows() > 0) {
-			$this->db->where('username', $pseudo);
+			$this->db->where('Mail_User', $mail);
 
-			return $this->getId($pseudo);
+			return $this->getId($mail);
 		} else {
 			return 0;
 		}
 	}
 
-	public function getId($username)
+	public function getId($mail)
 	{
-		$this->db->select('id');
-		$this->db->where('username', $username);
+		$this->db->select('Id_User');
+		$this->db->where('Mail_User', $mail);
 		$query = $this->db->get('user');
 		$data  = $query->first_row();
 
 		return $data->id;
 	}
 
-	public function getData($username)
+	public function getData($mail)
 	{
-		$this->db->where('username', $username);
+		$this->db->where('Mail_User', $mail);
 		$query = $this->db->get('user');
 		$data  = $query->first_row();
 
 		return $data;
 	}
 
-	public function getAdresse($membre_id)
+	public function getAdresse($id)
 	{
-		$this->db->where('membre_id', $membre_id);
+		$this->db->where('Id_User', $id);
 		$query = $this->db->get('adresse');
 		$data  = $query->first_row();
 

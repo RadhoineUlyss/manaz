@@ -15,11 +15,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					} ?>
 					<?php echo form_open('Test/connection'); ?> <!-- FORMULAIRE CONNECTION DEBUT  -->
 					<div class="form-group">
-						<?php echo form_error('username', '<span class="error">', '</span>'); ?>
 						<input type="text" class="form-control" name="email" placeholder="Email" value="<?php echo set_value('username'); ?>" required="required">
 					</div>
 					<div class="form-group">
-						<?php echo form_error('password', '<span class="error">', '</span>'); ?>
 						<input type="password" class="form-control" name="password" placeholder="Mot de passe" required="required">
 					</div>
 					<div class="form-group">
@@ -52,38 +50,31 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<div class="form-group">
 						<label for="SelectType">Example select</label>
 						<select class="form-control" id="SelectType" name="type_compte" required>
-							<option value="" SELECTED>Vous êtes ?</option>
-							<option value="1">Je suis un particulier</option>
-							<option value="2">Je suis professionnel</option>
+							<option value="" <?php echo set_value('type_compte') == '' ? "SELECTED" : "" ?>>Vous êtes ?</option>
+							<option value="1" <?php echo set_value('type_compte') == 1 ? "SELECTED" : "" ?>>Je suis un particulier</option>
+							<option value="2" <?php echo set_value('type_compte') == 2 ? "SELECTED" : "" ?>>Je suis professionnel</option>
 						</select>
 					</div>
 					<div class="form-group">
-						<?php echo form_error('nom', '<span class="error">', '</span>'); ?>
 						<input type="text" class="form-control" name="nom" placeholder="Nom" value="<?php echo set_value('nom'); ?>" required>
 					</div>
 					<div class="form-group">
-						<?php echo form_error('prenom', '<span class="error">', '</span>'); ?>
 						<input type="text" class="form-control" name="prenom" placeholder="Prénom" value="<?php echo set_value('prenom'); ?>" required>
 					</div>
 					<div class="form-group">
-						<?php echo form_error('email', '<span class="error">', '</span>'); ?>
-						<input type="email" class="form-control" name="email" placeholder="Email" required>
+						<input type="email" class="form-control" value="<?php echo set_value('email'); ?>" name="email" placeholder="Email" required>
 					</div>
 					<div class="form-group">
-						<?php echo form_error('tel', '<span class="error">', '</span>'); ?>
-						<input type="number" class="form-control" name="tel" placeholder="Tel" required>
+						<input type="number" class="form-control" value="<?php echo set_value('tel'); ?>" name="tel" placeholder="Tel" required>
 					</div>
 					<div class="form-group">
-						<?php echo form_error('adress', '<span class="error">', '</span>'); ?>
-						<input type="text" class="form-control" name="adresse" placeholder="adresse" required>
+						<input type="text" class="form-control" value="<?php echo set_value('adresse'); ?>" name="adresse" placeholder="adresse" required>
 					</div>
 					<div class="form-group">
-						<?php echo form_error('password', '<span class="error">', '</span>'); ?>
 						<input type="password" class="form-control" name="password" placeholder="Mot de passe" required>
 					</div>
 					<div class="form-group">
-						<?php echo form_error('password_confirm', '<span class="error">', '</span>'); ?>
-						<input type="password" class="form-control" name="password" placeholder="Mot de passe verification" required>
+						<input type="password" class="form-control" name="password_confirm" placeholder="Mot de passe verification" required>
 					</div>
 					<div class="form-group">
 						<button type="submit" class="btn btn-primary btn-lg btn-block login-btn">S'inscrire</button>
