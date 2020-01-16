@@ -89,10 +89,6 @@ input:focus {
   width: 40%;
   border-radius: 12px;
 }
-#thema_img{
-    display: flex;
-    align-items:center;
-}
 .footer {
     text-align: center;
     position: absolute;
@@ -187,5 +183,19 @@ a:-webkit-any-link{
     text-decoration:none !important;
 }
 
-
+#connexion{
+    background-color: white;
+    border: 2px solid #c0b5b5;
+    color: black;
+    border-radius: 12px;
+    padding: 2px 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+#connexion:hover {background-color: #c0b5b5;}
 

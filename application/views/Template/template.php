@@ -127,24 +127,22 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 				<!-- Content -->
 				<h6 class="text-uppercase font-weight-bold">Mannaz</h6>
-				<p>Votre Solution de coaching.</p>
+				<p>L'équilibre naît de l'action.</p>
 
 			</div>
-			<!-- Grid column -->
-
 			<!-- Grid column -->
 			<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
 
 				<!-- Links -->
-				<h6 class="text-uppercase font-weight-bold">ongles 1</h6>
+				<h6 class="text-uppercase font-weight-bold">onglet 1</h6>
 				<p class="footerSecText">
-					<a href="<?php echo base_url('/sneakers') ?>">ongles 2</a>
+					<a href="<?php echo base_url('/sneakers') ?>">onglet 2</a>
 				</p>
 				<p class="footerSecText">
-					<a href="#!">ongles 3</a
+					<a href="#!">onglet 3</a>
 				</p>
 				<p class="footerSecText">
-					<a href="#!">ongles 4</a>
+					<a href="#!">onglet 4</a>
 				</p>
 
 			</div>
@@ -159,7 +157,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<a href="#!">Liens 2</a>
 				</p>
 				<p class="footerSecText">
-					<a href="#!">Liens 3S</a>
+					<a href="#!">Liens 3</a>
 				</p>
 				<p class="footerSecText">
 					<a href="#!">Liens 4</a>
