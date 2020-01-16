@@ -52,11 +52,16 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	</nav>
 	<div id="navigation">
 		<ul>
-			<li><a href="<?php echo base_url('/sneakers') ?>">Title</a></li>
-			<li><a href="">Title 1</a></li>
-			<li><a href="">Title 2</a></li>
-			<li><a href="">Title 3</a></li>
-			<li><a href="">Title 4</a></li>
+			<li><a href="<?php echo base_url('') ?>"><img id="logotop" src="<?php echo base_url(); ?>assets/img/mannaz-11.png"></a></li>
+			<li><a href="<?php echo base_url('') ?>"><a style="color:#FF8F71" href="">Accueil</a></li>
+			<li><a style="margin-right:20px"href="">Développement personnel</a></li>
+			<li><a style="margin-right:20px"href="">Qu'est ce que Mannaz ?</a></li>
+			<li><a style="margin-right:20px"href="">Mon approche</a></li>
+			<li><a style="margin-right:20px"href="">Blog</a></li>
+			<li><a href="<?php echo base_url('') ?>"><img style="height: 15px; width: 15px;"id="i" src="<?php echo base_url(); ?>assets/img/i.svg"><img style="height: 15px; width: 15px; margin-left: 18px" id="f" src="<?php echo base_url(); ?>assets/img/f.svg"><img style="height: 22px; width: 22px; margin-left: 18px"id="in" src="<?php echo base_url(); ?>assets/img/in.svg"></a></li>
+			<li><input id="connexion" type="button" value="Connexion">
+            
+
 		</ul>
 	</div>
 	<!-- LA BARRE DE NAVIGATION FIN -->
