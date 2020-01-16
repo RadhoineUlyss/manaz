@@ -2,16 +2,15 @@ html {
     position: relative;
     min-height: 100%;
 }
-
 #logotop{
-	max-height:40px;
+	max-height:80px;
 
 }
 .navbar-header {
     float: left;
     text-align: center;
     width: 100%;
-	margin-right:4%;
+    margin-right:4%;
 }
 
 input:focus {
@@ -33,13 +32,13 @@ input:focus {
 }
 #navigation{
     background-color: #f8f9fa !important;
-	position:fixed;
+	margin-bottom: 50px;
+	position: fixed;
     width: 100%;
     top: 0;
     text-align: center;
 	overflow: hidden;
-	display: flex;
-	display: inline;
+	
 }
 #navigation ul{
     list-style: none;
@@ -53,12 +52,10 @@ input:focus {
     display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 6px 12px;
+    padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-	color:black;
-	flex-wrap: nowrap;
-	margin-bottom:20px;
+    color:black;
 }
 #navigation ul li:first-child{
     margin-left: 2%;
@@ -189,18 +186,6 @@ input:focus {
 a:-webkit-any-link{
     text-decoration:none !important;
 }
-#legal{
-    background-color: white;
-    border: 2px solid #c0b5b5;
-    color: black;
-    border-radius: 12px;
-    padding: 2px 4px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    cursor: pointer;
-}
-#legal:hover {background-color: #c0b5b5;}
+
+
+
