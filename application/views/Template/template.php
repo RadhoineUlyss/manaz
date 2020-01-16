@@ -58,8 +58,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			<li><a href="">Qu'est ce que Mannaz ?</a></li>
 			<li><a href="">Développement personnel</a></li>
 			<li><a href="">Méthodologie</a></li>
-				<li><a href="<?php echo base_url('') ?>"><img id="f" src="<?php echo base_url(); ?>assets/img/f.svg"><img id="i" src="<?php echo base_url(); ?>assets/img/i.svg"><img id="in" src="<?php echo base_url(); ?>assets/img/in.svg"></a></li>
-			<li><a href="<?php echo base_url('') ?>"><img id="rec" src="<?php echo base_url(); ?>assets/img/Rectangle_1.svg"><img id="con" src="<?php echo base_url(); ?>assets/img/Connexion.svg"></a></li>
+			<li><a href="<?php echo base_url('') ?>"><img id="f" src="<?php echo base_url(); ?>assets/img/f.svg"><img id="i" src="<?php echo base_url(); ?>assets/img/i.svg"><img id="in"
+																																												  src="<?php echo base_url(); ?>assets/img/in.svg"></a>
+			</li>
+			<li><a href="<?php echo base_url('') ?>"><img id="rec" src="<?php echo base_url(); ?>assets/img/Rectangle_1.svg"><img id="con" src="<?php echo base_url(); ?>assets/img/Connexion.svg"></a>
+			</li>
 		</ul>
 	</div>
 	<!-- LA BARRE DE NAVIGATION FIN -->
