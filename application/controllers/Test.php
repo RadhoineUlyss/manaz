@@ -33,23 +33,22 @@ class Test extends CI_Controller
 	public function inscription()
 	{
 
-		$this->load->model('inscription_model');
-
-
 		$this->form_validation->set_rules('nom', 'Nom', 'trim|required');
 		$this->form_validation->set_rules('prenom', 'Prénom', 'trim|required');
-		$this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|is_unique[user.Mail_User]',
+		$this->form_validation->set_rules('email', 'E-mail', 'trim|required|valid_email|is_unique[user.Mail_User]',
 			[
 				'is_unique'   => 'L\'email est déjà utilisé',
 				'valid_email' => 'L\'adresse email doit être valide'
 			]);
-		$this->form_validation->set_rules('tel', 'tel', 'trim|required|is_unique[user.Telephone_User]',
+		$this->form_validation->set_rules('tel', 'téléphone', 'trim|required|is_unique[user.Telephone_User]|min_length[9]',
 			[
 				'is_unique' => 'Le numero de telephone est déjà utilisé',
 			]);
-		$this->form_validation->set_rules('adresse', 'adresse', 'trim|required|min_length[5]');
+		$this->form_validation->set_rules('adresse', 'Adresse', 'trim|required|min_length[5]');
+		$this->form_validation->set_rules('postal_code', 'Code Postal', 'trim|required|integer|min_length[5]|max_length[5]');
+		$this->form_validation->set_rules('ville', 'Ville', 'trim|required');
 		$this->form_validation->set_rules('password', 'Mot de passe', 'trim|required|min_length[5]');
-		$this->form_validation->set_rules('password_confirm', 'Mot de passe confirmation', 'required|matches[password]');
+		$this->form_validation->set_rules('password_confirm', 'Confirmation mot de passe ', 'required|matches[password]');
 
 		if ($this->form_validation->run()) {
 			$data = [
@@ -59,10 +58,13 @@ class Test extends CI_Controller
 				'Mail_User'             => $this->input->post('email'),
 				'Telephone_User'        => $this->input->post('tel'),
 				'Adresse_User'          => $this->input->post('adresse'),
+				'Postal_Code_User'      => $this->input->post('postal_code'),
+				'Ville_User'            => $this->input->post('ville'),
 				'Password_User'         => sha1($this->input->post('password')),
 				'Date_Inscription_User' => date("Y-m-d"),
 			];
 
+			$this->load->model('inscription_model');
 			$this->inscription_model->signup($data);
 
 			$this->session->set_flashdata('message', 'Inscription réussie');

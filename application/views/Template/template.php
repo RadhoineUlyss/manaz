@@ -52,17 +52,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	</nav>
 	<div id="navigation">
 		<ul>
-			<li><a href="<?php echo base_url('') ?>"><img id="logotop" src="<?php echo base_url(); ?>assets/img/mannaz-11.png"></a></li>
-			<li><a href="<?php echo base_url('') ?>"><img id="home" src="<?php echo base_url(); ?>assets/img/Home.svg"><img id="acc" src="<?php echo base_url(); ?>assets/img/Accueil.svg"></a></li>
+
 			<li><a href="">Blog</a></li>
 			<li><a href="">Qu'est ce que Mannaz ?</a></li>
 			<li><a href="">Développement personnel</a></li>
 			<li><a href="">Méthodologie</a></li>
-			<li><a href="<?php echo base_url('') ?>"><img id="f" src="<?php echo base_url(); ?>assets/img/f.svg"><img id="i" src="<?php echo base_url(); ?>assets/img/i.svg"><img id="in"
-																																												  src="<?php echo base_url(); ?>assets/img/in.svg"></a>
-			</li>
-			<li><a href="<?php echo base_url('') ?>"><img id="rec" src="<?php echo base_url(); ?>assets/img/Rectangle_1.svg"><img id="con" src="<?php echo base_url(); ?>assets/img/Connexion.svg"></a>
-			</li>
 		</ul>
 	</div>
 	<!-- LA BARRE DE NAVIGATION FIN -->
@@ -213,7 +207,7 @@ if ($script != '') {
 
 <?php
 if ($this->session->flashdata('error_ins')) {
-	echo "<script>$('#myModal2').modal('show');</script>";
+	echo "<script>$('#inscriptionModal').modal('show');</script>";
 } else {
 	if ($this->session->flashdata('error_ident')) {
 		echo "<script>$('#myModal').modal('show');</script>";
