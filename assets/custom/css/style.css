@@ -4,10 +4,12 @@ html {
     overflow-x: hidden;
 }
 
-#logotop{
-	max-height:40px;
 
+#logomid{
+
+	max-height: 40px;
 }
+
 .monBR 
 {
     display: block;
@@ -63,7 +65,7 @@ input:focus {
     font-size: 17px;
 	color:black;
 	flex-wrap: nowrap;
-	margin-bottom:20px;
+	
 }
 #navigation ul li:first-child{
     margin-left: 0%;
@@ -74,7 +76,6 @@ input:focus {
     margin-left: 2%;
 	margin-right: 2%;
 	text-align: center;
-	margin-bottom: 3%;
 }
 #navigation ul li:nth-child(3){
     margin-left: 2%;
@@ -217,12 +218,17 @@ a:-webkit-any-link{
 }
 #connexion:hover {background-color: #c0b5b5;}
 
+
+
+/* menu sur le coté */
+
 #menuToggle
 {
   display: block;
   position: relative;
   top: 50px;
   left: 50px;
+  background-color: transparent;
   
   z-index: 1;
   
@@ -232,15 +238,15 @@ a:-webkit-any-link{
 
 #menuToggle a
 {
-  text-decoration: none;
-  color: #232323;
+  text-decoration: underline orange;
+  color: white;
   
   transition: color 0.3s ease;
 }
 
 #menuToggle a:hover
 {
-  color: tomato;
+  color: orange;
 }
 
 
@@ -255,8 +261,8 @@ a:-webkit-any-link{
   
   cursor: pointer;
   
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
+  opacity: 0; 
+  z-index: 2; 
   
   -webkit-touch-callout: none;
 }
@@ -269,7 +275,7 @@ a:-webkit-any-link{
   margin-bottom: 5px;
   position: relative;
   
-  background: #cdcdcd;
+  background: orange;
   border-radius: 3px;
   
   z-index: 1;
@@ -277,7 +283,6 @@ a:-webkit-any-link{
   transform-origin: 4px 0px;
   
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
               opacity 0.55s ease;
 }
 
@@ -291,38 +296,24 @@ a:-webkit-any-link{
   transform-origin: 0% 100%;
 }
 
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
 #menuToggle input:checked ~ span
 {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
+  background: orange;
 }
 
-/*
- * But let's hide the middle one.
- */
 #menuToggle input:checked ~ span:nth-last-child(3)
 {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-/*
- * Ohyeah and the last one should go the other direction
- */
 #menuToggle input:checked ~ span:nth-last-child(2)
 {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
 #menu
 {
   position: absolute;
@@ -330,11 +321,12 @@ a:-webkit-any-link{
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
+		
   
-  background: #ededed;
+  background: #8baeec;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
+  
   
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
@@ -348,9 +340,6 @@ a:-webkit-any-link{
   font-size: 22px;
 }
 
-/*
- * And let's slide it in from the left
- */
 #menuToggle input:checked ~ ul
 {
   transform: none;
