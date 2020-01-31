@@ -33,6 +33,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <header>
 	<!-- LA BARRE DE NAVIGATION DEBUT -->
 	<div id="navigation">
+
+</nav>
 		<ul>
 			<li><a href="<?php echo base_url('') ?>"><img id="logotop" src="<?php echo base_url(); ?>assets/img/mannaz-11.png"></a></li>
 			<li><a href="<?php echo base_url('') ?>"><a style="margin-top:20%; color:#FF8F71" href="">Accueil</a></li>
@@ -40,15 +42,17 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			<li><a style="margin-right:9px; margin-top:10%;"href="">Qu'est ce que Mannaz ?</a></li>
 			<li><a style="margin-right:9px; margin-top:15%;"href="">Mon approche</a></li>
 			<li><a style="margin-right:9px; margin-top:30%;"href="">Blog</a></li>
-			<li><a href="<?php echo base_url('') ?>"><img style="margin-top:30%; height: 15px; width: 15px;"id="i" src="<?php echo base_url(); ?>assets/img/i.svg"><img style="margin-top:30%;height: 15px; width: 15px; margin-left: 18px" id="f" src="<?php echo base_url(); ?>assets/img/f.svg"><img style="margin-top:20%;height: 22px; width: 22px; margin-left: 18px"id="in" src="<?php echo base_url(); ?>assets/img/in.svg"></a></li>
-			<li><input style="margin-top:20%;" id="connexion" type="button" value="Connexion">
-            
+			<li><a href="<?php echo base_url('') ?>"><img style="margin-top:21%; height: 15px; width: 15px;"id="i" src="<?php echo base_url(); ?>assets/img/i.svg"><img style="margin-top:21%;height: 15px; width: 15px; margin-left: 18px" id="f" src="<?php echo base_url(); ?>assets/img/f.svg"><img style="margin-top:21%;height: 23px; width: 25px; margin-left: 18px"id="in" src="<?php echo base_url(); ?>assets/img/in.svg"></a></li>
+			<li><input style="margin-top:20%;margin-left:25%;" id="connexion" type="button" value="Connexion">
 
 		</ul>
 	</div>
+	
 
 	<!-- LA BARRE DE NAVIGATION FIN -->
+
 </header>
+<body>
 <div id="video">
 	<video controls>
     <source src="\assets\img\video.png"
