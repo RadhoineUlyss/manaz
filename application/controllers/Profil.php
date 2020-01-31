@@ -28,16 +28,13 @@ class Profil extends CI_Controller
 		// On affiche notre page avec le template
 
 		if ($this->session->userdata('login_User')) {
+
 			$this->session->set_flashdata('current_url', current_url());
-			$user    = $this->getData();
-			$adresse = $this->getAdresse($this->getId());
-			if ($user->superadmin) {
-				$data               = $this->session->userdata('login_User');
-				$data['superadmin'] = $user->superadmin;
-				$this->session->set_userdata('login_User', $data);
-			}
-			$user->adresse = $adresse;
-			$page          = $this->load->view('profil_view', $user, true);
+			$user = $this->getData();
+			//$adresse = $this->getAdresse($this->getId());
+
+			$data['user'] = $user;
+			$page         = $this->load->view('profil_view', $data, true);
 			$this->dynamic_navbar->verification($page, 'profil_script', 'profil_style');
 		} else {
 			redirect($this->session->flashdata('current_url'));
@@ -73,7 +70,7 @@ class Profil extends CI_Controller
 		$this->form_validation->set_message('is_unique', 'L\'email est déjà utilisé');
 		$this->form_validation->set_message('valid_email', 'L\'adresse email doit être valide');
 
-		$this->form_validation->set_rules('email', 'Email', 'trim|valid_email|is_unique[membres.email]|required');
+		$this->form_validation->set_rules('email', 'Email', 'trim|valid_email|is_unique[user.email]|required');
 
 		if ($this->form_validation->run()) {
 			$data = $this->input->post();

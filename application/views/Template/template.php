@@ -15,7 +15,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<!-- Font -->
 	<link type="text/css" href="http://fonts.googleapis.com/css?family=Lato:300,700"/>
 	<!-- FavIcon -->
-	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url(); ?>assets/favicon/mannaz-12.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url(); ?>assets/favicon/favicon.png">
 	<link rel="manifest" href="<?php echo base_url(); ?>assets/favicon/manifest.json">
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="<?php echo base_url(); ?>assets/favicon/ms-icon-144x144.png">
@@ -27,24 +27,38 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	}
 	?>
 </head>
-
 <!-- NE PAS TOUCHER EN HAUT -->
-
+<body>
 <header>
 	<!-- LA BARRE DE NAVIGATION DEBUT -->
+	<nav class="navbar navbar-expand-sm justify-content-center">
+		<div class="d-flex flex-row-reverse">
+			<form class="form-inline md-form form-sm mt-0">
+				<span onclick="DisplaySearchBar()"><i id="searchicon" class="fa fa-search fa-lg" aria-hidden="true"></i></span>
+				<input id="searchbar" class="form-control-sm" type="text" placeholder="Search" aria-label="Search">
+			</form>
+		</div>
+		<div class="navbar-header">
+			<a class="navbar-brand" href="<?php echo base_url('') ?>"><img id="logotop" src="<?php echo base_url(); ?>assets/img/logo_mannaz_conseils.png"></a>
+		</div>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarCollapse">
+			<div class="d-flex flex-row-reverse">
+				<?php echo $navbar ?> <!-- $navbar correspond aux boutons présents à droite de la barre (ex : Se connecter ) -->
+			</div>
+		</div>
+	</nav>
 	<div id="navigation">
 		<ul>
-			<li><a href="<?php echo base_url('') ?>"><img style="height: 10px; width: 10px;"DX id="logotop" src="<?php echo base_url(); ?>assets/img/mannaz-11.png"></a></li>
-			<li><a href="<?php echo base_url('') ?>"><img id="home" src="<?php echo base_url(); ?>assets/img/Home.svg"><img id="acc" src="<?php echo base_url(); ?>assets/img/Accueil.svg"></a></li>
+
 			<li><a href="">Blog</a></li>
 			<li><a href="">Qu'est ce que Mannaz ?</a></li>
 			<li><a href="">Développement personnel</a></li>
 			<li><a href="">Méthodologie</a></li>
-			<li><a href="<?php echo base_url('') ?>"><img id="f" src="<?php echo base_url(); ?>assets/img/f.svg"><img id="i" src="<?php echo base_url(); ?>assets/img/i.svg"><img id="in" src="<?php echo base_url(); ?>assets/img/in.svg"></a></li>
-			<li><a href="<?php echo base_url('') ?>"></a></li>
 		</ul>
 	</div>
-
 	<!-- LA BARRE DE NAVIGATION FIN -->
 </header>
 <div id="video">
@@ -103,11 +117,37 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		<p>Vous êtes bleu et c'est difficile dans la vie de tous les jours...</p>
 		<img id="i7"src="<?php echo base_url(); ?>assets/img/7.png" alt="homme qui baille">
 	</div>
+	<div>
+	<?php
+	if ($this->session->flashdata('message')) {
+		echo '<div class="alert alert-success" id="success-alert">
+                <button type="button" class="close" data-dismiss="alert">x</button>
+                <strong>' . $this->session->flashdata('message') . '</strong>
+                </div>';
+	}
+	?>
+	<?php
+	if (isset($formulaire)) {
+		echo $formulaire;
+	}
+	?>
+	<!-- LA VUE DYNAMIQUE COMMENCE ICI -->
+	<div class="container"><?php echo $page; ?></div>
 </div>
+
 <!-- Footer -->
+<footer class="page-footer font-small unique-color-dark prem_footer">
+
+	<div style="background-color: #2F2F2F;">
+		<div class="container">
 
 			<!-- Grid row-->
 			<div class="row py-4 d-flex align-items-center">
+
+				<!-- Grid column -->
+				<div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+					<h6 class="mb-0 whiteicon">Connectez-vous avec nous sur les réseaux sociaux !</h6>
+				</div>
 				<!-- Grid column -->
 
 				<!-- Grid column -->
@@ -139,26 +179,74 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			<div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
 
 				<!-- Content -->
-				<h6 class="text-uppercase font-weight-bold">Pour plus d'informations, contactez nous</h6>
-				<p><i class="fa fa-phone mr-3"></i>+33(0) 6 18  27 67 58</p>
-				<p><i class="fa fa-envelope mr-3"></i>mannaz@gmail.com</p>
-				<br>
-				<br>
-				<div class="footer-copyright text-center py-3 sec_footer">
-				© 2019 Copyright: <a href="<?php echo base_url('') ?>"> Mannaz.fr</a>
-				</div>
-
+				<h6 class="text-uppercase font-weight-bold">Mannaz</h6>
+				<p>Votre Solution de coaching.</p>
 
 			</div>
+			<!-- Grid column -->
+
+			<!-- Grid column -->
 			<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-			<br>
-			<br>
-			<br>
-			<br>
-			<input id="legal" type="button" value="Mentions légales">
+
+				<!-- Links -->
+				<h6 class="text-uppercase font-weight-bold">ongles 1</h6>
+				<p class="footerSecText">
+					<a href="<?php echo base_url('/sneakers') ?>">ongles 2</a>
+				</p>
+				<p class="footerSecText">
+					<a href="#!">ongles 3</a
+				</p>
+				<p class="footerSecText">
+					<a href="#!">ongles 4</a>
+				</p>
+
 			</div>
+			<!-- Grid column -->
+
+			<!-- Grid column -->
+			<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+				<!-- Links -->
+				<h6 class="text-uppercase font-weight-bold">Liens 1</h6>
+				<p class="footerSecText">
+					<a href="#!">Liens 2</a>
+				</p>
+				<p class="footerSecText">
+					<a href="#!">Liens 3S</a>
+				</p>
+				<p class="footerSecText">
+					<a href="#!">Liens 4</a>
+				</p>
+
+			</div>
+			<!-- Grid column -->
+
+			<!-- Grid column -->
+			<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+				<!-- Links -->
+				<h6 class="text-uppercase font-weight-bold">Contact</h6>
+				<p>
+					<i class="fa fa-home mr-3"></i> Aix-En-Provence 13090 FR</p>
+				<p>
+					<i class="fa fa-envelope mr-3"></i> hello@mannaz.com</p>
+				<p>
+					<i class="fa fa-phone mr-3"></i> + 33 11 11 11 11</p>
+
+			</div>
+			<!-- Grid column -->
+
 		</div>
+		<!-- Grid row -->
+
 	</div>
+	<!-- Footer Links -->
+
+	<!-- Copyright -->
+	<div class="footer-copyright text-center py-3 sec_footer">© 2019 Copyright: <a href="<?php echo base_url('') ?>"> Mannaz.fr</a>
+	</div>
+	<!-- Copyright -->
+
 </footer>
 <!-- Footer -->
 <!-- NE PAS TOUCHER EN BAS -->
@@ -175,7 +263,7 @@ if ($script != '') {
 
 <?php
 if ($this->session->flashdata('error_ins')) {
-	echo "<script>$('#myModal2').modal('show');</script>";
+	echo "<script>$('#inscriptionModal').modal('show');</script>";
 } else {
 	if ($this->session->flashdata('error_ident')) {
 		echo "<script>$('#myModal').modal('show');</script>";

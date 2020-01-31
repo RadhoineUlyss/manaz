@@ -1,12 +1,12 @@
 <?php
 /**
  *
- * @var string   $username
- * @var string   $email
+ * @var stdClass $user
  * @var          $this CI_Loader
  *
  */
 ?>
+<?php var_dump($user); ?>
 <div id="profilPart1">
 	<div class="col-md-10">
 		<h1>Mon Profil</h1>
@@ -15,15 +15,9 @@
 	<div class="col-md-10">
 		<form method="post" action="" id="info_compte">
 			<div class="form-group row">
-				<label class="col-4 col-form-label">Nom d'utilisateur :</label>
-				<div class="col-8">
-					<p><?php echo $username ?></p>
-				</div>
-			</div>
-			<div class="form-group row">
 				<label class="col-4 col-form-label">Email :</label>
 				<div class="col-8">
-					<input type="mail" name="email" placeholder="Votre email" value="<?php echo $email ?>">
+					<input type="mail" name="email" placeholder="Votre email" value="<?php echo $user->Mail_User ?>">
 				</div>
 			</div>
 			<div class="form-group row">
@@ -46,21 +40,21 @@
 			<div class="form-group row">
 				<label class="col-4 col-form-label">Nom :</label>
 				<div class="col-8">
-					<input type="text" name="nom" placeholder="Nom" value="<?php echo $nom ?>">
+					<input type="text" name="nom" placeholder="Nom" value="<?php echo $user->Nom_User ?>">
 				</div>
 			</div>
 			<div class="form-group row">
 				<label class="col-4 col-form-label">Prénom :</label>
 				<div class="col-8">
-					<input type="text" name="prenom" placeholder="Prénom" value="<?php echo $prenom ?>">
+					<input type="text" name="prenom" placeholder="Prénom" value="<?php echo $user->Prenom_User ?>">
 				</div>
 			</div>
 			<div class="form-group row">
 				<label class="col-4 col-form-label">Adresse :</label>
 				<div class="col-8">
-				<?php echo '<input type="text" name="code_postal" placeholder="CP" value="'. $adresse->code_postal . '">' ?>
-					<?php echo '<input type="text" name="ville" placeholder="Ville" value="'. $adresse->ville . '">' ?>
-					<?php echo '<input type="text" name="ligne_adresse" placeholder="Ligne adresse" value="'. $adresse->ligne_adresse . '">' ?>
+					<?php echo '<input type="text" name="code_postal" placeholder="CP" value="' . $user->Postal_Code_User . '">' ?>
+					<?php echo '<input type="text" name="ville" placeholder="Ville" value="' . $user->Ville_User . '">' ?>
+					<?php echo '<input type="text" name="ligne_adresse" placeholder="Ligne adresse" value="' . $user->Adresse_User . '">' ?>
 				</div>
 			</div>
 			<div class="form-group row">
@@ -74,12 +68,12 @@
 </div>
 
 <?php
-$d = new DateTime($date_inscription);
+$d = new DateTime($user->Date_Inscription_User);
 echo "<p>Compte créé le " . $d->format("d-m-Y") . " .</p>"
 ?>
 
 <?php if ($this->getController()->isAdmin()) {
-    echo '<h4 style="color:red;">Vous avez un compte administrateur</h4>';
+	echo '<h4 style="color:red;">Vous avez un compte administrateur</h4>';
 } ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript">
@@ -87,31 +81,31 @@ echo "<p>Compte créé le " . $d->format("d-m-Y") . " .</p>"
 	$(document).ready(function (e) {
 
 		initialise();
-		
-        /*$('#info_pers').on('input change', function() {
 
-         if (($("#info_compte :input[name='email']").val() != email)) {
-         console.log(email + " " + $("#info_compte :input[name='email']").val());
-         $('#acc_cte').attr('disabled', false);
-         }
-         else {
-         $('#acc_cte').attr('disabled', false);
-         }
-         });
+		/*$('#info_pers').on('input change', function() {
 
-         var nom    = $("#info_pers :input[name='nom']").val();
-         var prenom = $("#info_pers :input[name='prenom']").val();
-         /*	$('#info_pers').on('input change', function() {
+		 if (($("#info_compte :input[name='email']").val() != email)) {
+		 console.log(email + " " + $("#info_compte :input[name='email']").val());
+		 $('#acc_cte').attr('disabled', false);
+		 }
+		 else {
+		 $('#acc_cte').attr('disabled', false);
+		 }
+		 });
 
-         if(($("#info_compte :input[name='email']").val() != email)){
-         console.log(email + " " + $("#info_compte :input[name='email']").val());
-         $('#acc_cte').attr('disabled', false);
-         }
-         else{
-         $('#acc_pers').attr('disabled', false);
-         }
+		 var nom    = $("#info_pers :input[name='nom']").val();
+		 var prenom = $("#info_pers :input[name='prenom']").val();
+		 /*	$('#info_pers').on('input change', function() {
 
-         });*/
+		 if(($("#info_compte :input[name='email']").val() != email)){
+		 console.log(email + " " + $("#info_compte :input[name='email']").val());
+		 $('#acc_cte').attr('disabled', false);
+		 }
+		 else{
+		 $('#acc_pers').attr('disabled', false);
+		 }
+
+		 });*/
 		$('#info_pers').submit(function () {
 			$.ajax({
 				url: '<?php echo base_url() . 'profil/modifierPerso/' ?>',
@@ -127,8 +121,7 @@ echo "<p>Compte créé le " . $d->format("d-m-Y") . " .</p>"
 						$("#result_pers").html('<button type="button" class="close" data-dismiss="alert">x</button>Informations personnelles modifiées');
 						$("#acc_pers").attr("disabled", true);
 						initialise();
-					}
-					else {
+					} else {
 						$("#result_pers").removeClass("alert-succes");
 						$("#result_pers").addClass("alert alert-danger");
 						$("#result_pers").html('<button type="button" class="close" data-dismiss="alert">x</button>' + data.erreur);
@@ -158,8 +151,7 @@ echo "<p>Compte créé le " . $d->format("d-m-Y") . " .</p>"
 						$("#result_cte").html('<button type="button" class="close" data-dismiss="alert">x</button>Informations du compte modifiées');
 						$("#acc_cte").attr("disabled", true);
 						initialise();
-					}
-					else {
+					} else {
 						$("#result_cte").removeClass("alert-succes");
 						$("#result_cte").addClass("alert alert-danger");
 						$("#result_cte").html('<button type="button" class="close" data-dismiss="alert">x</button>' + data.erreur);
@@ -174,33 +166,30 @@ echo "<p>Compte créé le " . $d->format("d-m-Y") . " .</p>"
 		});
 	});
 
-	function initialise()
-{
-    var email = $("#info_compte :input[name='email']").val();
+	function initialise() {
+		var email = $("#info_compte :input[name='email']").val();
 
 		$('#info_compte').on('input change', function () {
 
 			if ($("#info_compte :input[name='email']").val() != email) {
 				//console.log(email + " " + $("#info_compte :input[name='email']").val());
 				$('#acc_cte').attr('disabled', false);
-			}
-			else {
+			} else {
 				$('#acc_cte').attr('disabled', true);
 			}
 		});
 
-		var $form = $('#info_pers');
+		var $form        = $('#info_pers');
 		var initialState = $form.serialize();
 
 		$("#info_pers").on('input change', function () {
 			if (initialState != $form.serialize()) {
 				$('#acc_pers').attr('disabled', false);
-			}
-			else {
+			} else {
 				$('#acc_pers').attr('disabled', true);
 			}
 		});
-}
+	}
 
 
 </script>
