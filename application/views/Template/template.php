@@ -78,16 +78,22 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				  	Fondateur de Mannaz et coach en aide à la personne, <br>
 				  	Devellopement personnel et professionnel
 				</p> 
-				<input id="qui" type="button" value="Qui suis-je?">
+				<button id="qui" style="vertical-align:middle"><span>Qui suis-je </span></button>
     		</div>
   		</div>
 	</div>
 </div>
 <br>
+<br>
+<br>
+<br>
+<br>
 </div>
 <div id="thema">
-	<p id="thema_1">Différentes thématiques que nous pourrions aborder ensemble</p>
-	<p ip="thema_2">Survolez les illustrations</p>
+	<span style="font-size: 2em;">Différentes thématiques que nous pourrions </span>
+	<br>
+	<span style="font-size: 2em;">Aborder ensemble</span>
+	<p>Survolez les illustrations</p>
 	<div id="thema_img">
 		<img id="i4"src="<?php echo base_url(); ?>assets/img/4.png" alt="homme qui baille">
 		<p>Vos émotions vous submergent facilemnt...</p>
