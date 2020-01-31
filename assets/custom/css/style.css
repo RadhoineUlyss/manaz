@@ -95,6 +95,12 @@ input:focus {
 #exx{
     padding-top: 20px;
 }
+#qui{
+    border-radius: 24px;
+    padding: 10px 24px;
+    background-color: #FF8F71;
+    color: white;
+}
 #thema_img{
     display: flex;
     align-items:center;
