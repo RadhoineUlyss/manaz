@@ -55,6 +55,28 @@ defined('BASEPATH') or exit('No direct script access allowed');
             type="video/mp4">
     Sorry, your browser doesn't support embedded videos.
 </video>
+
+<div id="exx">
+	<div style="padding-left: 13%;">
+		<p>
+			<span style="font-size: 2em;">Votre coach </span>
+			<span style="color: blue;font-size: 2em;">Mannaz </span>
+			<span style="font-size: 2em;">2.0</span>
+		</p>
+		<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+	</div>
+	<div class="container">
+ 	 	<div class="row">
+    		<div class="col-sm">
+      			<img style="width: 300px;height: 300px;" src="\assets\img\Daniela_Verdier.png" alt="Daniela_Verdier">
+   			</div>
+   		 	<div class="col-sm">
+      			One of three columns
+    		</div>
+  		</div>
+	</div>
+</div>
+<br>
 </div>
 <div id="thema">
 	<p id="thema_1">Différentes thématiques que nous pourrions aborder ensemble</p>
