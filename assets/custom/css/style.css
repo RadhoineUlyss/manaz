@@ -1,11 +1,16 @@
 html {
     position: relative;
     min-height: 100%;
+    overflow-x: hidden;
 }
 
 #logotop{
 	max-height:40px;
 
+}
+.monBR 
+{
+    display: block;
 }
 .navbar-header {
     float: left;
@@ -94,6 +99,13 @@ input:focus {
   margin-right: auto;
   width: 40%;
   border-radius: 12px;
+}
+#exx{
+    padding-top: 20px;
+}
+#thema_img{
+    display: flex;
+    align-items:center;
 }
 .footer {
     text-align: center;

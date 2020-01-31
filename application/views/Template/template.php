@@ -61,10 +61,41 @@ defined('BASEPATH') or exit('No direct script access allowed');
             type="video/mp4">
     Sorry, your browser doesn't support embedded videos.
 </video>
+
+<div id="exx">
+	<div style="padding-left: 13%;">
+		<p>
+			<span style="font-size: 2em;">Votre coach </span>
+			<span style="color: blue;font-size: 2em;">Mannaz </span>
+			<span style="font-size: 2em;">2.0</span>
+		</p>
+		<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+	</div>
+	<div class="container">
+ 	 	<div class="row">
+    		<div class="col-sm">
+      			<img style="width: 300px;height: 300px;" src="\assets\img\Daniela_Verdier.png" alt="Daniela_Verdier">
+   			</div>
+   		 	<div class="col-sm">
+      			One of three columns
+    		</div>
+  		</div>
+	</div>
+</div>
+<br>
 </div>
 <div id="thema">
 	<p id="thema_1">Différentes thématiques que nous pourrions aborder ensemble</p>
 	<p ip="thema_2">Survolez les illustrations</p>
+	<div id="thema_img">
+		<img id="i4"src="<?php echo base_url(); ?>assets/img/4.png" alt="homme qui baille">
+		<p>Vos émotions vous submergent facilemnt...</p>
+		<img id="i5"src="<?php echo base_url(); ?>assets/img/5.png" alt="homme qui baille">
+		<p>Atteint d'une maladie vous avez besoin de parler...</p>
+		<img id="i6"src="<?php echo base_url(); ?>assets/img/6.png" alt="homme qui baille">
+		<p>Vous êtes bleu et c'est difficile dans la vie de tous les jours...</p>
+		<img id="i7"src="<?php echo base_url(); ?>assets/img/7.png" alt="homme qui baille">
+	</div>
 </div>
 <!-- Footer -->
 
@@ -123,50 +154,17 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			</div>
 			<!-- Grid column -->
 
-			<!-- Grid column -->
-			<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-
-				<!-- Links -->
-				<h6 class="text-uppercase font-weight-bold">Liens 1</h6>
-				<p class="footerSecText">
-					<a href="#!">Liens 2</a>
-				</p>
-				<p class="footerSecText">
-					<a href="#!">Liens 3</a>
-				</p>
-				<p class="footerSecText">
-					<a href="#!">Liens 4</a>
-				</p>
 
 			</div>
-			<!-- Grid column -->
-
-			<!-- Grid column -->
-			<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-
-				<!-- Links -->
-				<h6 class="text-uppercase font-weight-bold">Contact</h6>
-				<p>
-					<i class="fa fa-home mr-3"></i> Aix-En-Provence 13090 FR</p>
-				<p>
-					<i class="fa fa-envelope mr-3"></i> hello@mannaz.com</p>
-				<p>
-					<i class="fa fa-phone mr-3"></i> + 33 11 11 11 11</p>
-
+			<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+			<br>
+			<br>
+			<br>
+			<br>
+			<input id="legal" type="button" value="Mentions légales">
 			</div>
-			<!-- Grid column -->
-
 		</div>
-		<!-- Grid row -->
-
 	</div>
-	<!-- Footer Links -->
-
-	<!-- Copyright -->
-	<div class="footer-copyright text-center py-3 sec_footer">© 2019 Copyright: <a href="<?php echo base_url('') ?>"> Mannaz.fr</a>
-	</div>
-	<!-- Copyright -->
-
 </footer>
 <!-- Footer -->
 <!-- NE PAS TOUCHER EN BAS -->
