@@ -110,7 +110,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				  	Fondateur de Mannaz et coach en aide à la personne, <br>
 				  	Devellopement personnel et professionnel
 				</p> 
-				<input id="qui" type="button" value="Qui suis-je?">
+				<button id="qui" style="vertical-align:middle"><span>Qui suis-je </span></button>
     		</div>
   		</div>
 	</div>
