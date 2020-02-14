@@ -52,7 +52,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		</div>
 	</nav>
 	<div id="navigation">
-		
+		<p> f <p>
         <ul>
 			<li><a href="<?php echo base_url('') ?>"><a style="margin-top:10%;" href="">L'equilibre naît de l'action.</a></li>
 			<li><a style="margin-right:9px; margin-top:10%;"href="">Qu'est ce que Mannaz ?</a></li>
