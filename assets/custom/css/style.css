@@ -47,6 +47,7 @@ input:focus {
 	overflow: hidden;
 	display: flex;
 	display: inline;
+	     
 }
 #navigation ul{
     list-style: none;
@@ -55,7 +56,7 @@ input:focus {
     float:left;
 }
 #navigation ul li a{
-    font-family: 'Lato', sans-serif !important;
+    font-family: 'Montserrat Alternates',sans-serif;	
     float: left;
     display: block;
     color: #f2f2f2;
@@ -209,7 +210,7 @@ a:-webkit-any-link{
     border-radius: 12px;
     padding: 2px 4px;
     text-align: center;
-    text-decoration: none;
+    
     display: inline-block;
     font-size: 16px;
     -webkit-transition-duration: 0.4s; /* Safari */
@@ -238,9 +239,9 @@ a:-webkit-any-link{
 
 #menuToggle a
 {
-  text-decoration: underline orange;
+  text-decoration-style: bold;
   color: white;
-  
+  font-family: 'Montserrat Alternates', sans-serif;
   transition: color 0.3s ease;
 }
 
@@ -267,7 +268,7 @@ a:-webkit-any-link{
   -webkit-touch-callout: none;
 }
 
-#menuToggle span
+#menuToggle span	
 {
   display: block;
   width: 33px;
@@ -317,7 +318,7 @@ a:-webkit-any-link{
 #menu
 {
   position: absolute;
-  width: 300px;
+  width : 500px;
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;

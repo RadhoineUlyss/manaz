@@ -13,7 +13,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/custom/css/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- Font -->
-	<link type="text/css" href="http://fonts.googleapis.com/css?family=Lato:300,700"/>
+	<link type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat+Alternates&display=swap" rel="stylesheet">
 	<!-- FavIcon -->
 	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url(); ?>assets/favicon/logo-mannaz1.png">
 	<link rel="manifest" href="<?php echo base_url(); ?>assets/favicon/manifest.json">
@@ -29,7 +29,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 </head>
 
 <!-- NE PAS TOUCHER EN HAUT -->
-
 
 <header>
 	
@@ -51,7 +50,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<!-- LA BARRE DE NAVIGATION FIN -->
 
 </header>
-<nav role="navigation">
+<nav role="deroulant">
   <div id="menuToggle">
     <input type="checkbox" />
 
