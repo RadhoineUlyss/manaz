@@ -16,9 +16,9 @@ html {
 }
 .navbar-header {
     float: left;
-    text-align: center;
-    width: 100%;
-    margin-right:4%;
+    text-align: right;
+    width: 10%;
+    
 }
 #searchicon{
     margin-right:5%;
@@ -50,11 +50,12 @@ input:focus {
 #navigation{
     background-color: white !important;
 	position:fixed;
+	width: 100%;
     top: 0;
     text-align: center;
 	overflow: hidden;
-	display: flex;
-	display: inline;
+	display: inline
+	
 	     
 }
 #navigation ul{
