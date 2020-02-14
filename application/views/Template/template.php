@@ -15,7 +15,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<!-- Font -->
 	<link type="text/css" href="http://fonts.googleapis.com/css?family=Lato:300,700"/>
 	<!-- FavIcon -->
-	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url(); ?>assets/favicon/favicon.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url(); ?>assets/favicon/logo-mannaz1.png">
 	<link rel="manifest" href="<?php echo base_url(); ?>assets/favicon/manifest.json">
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="<?php echo base_url(); ?>assets/favicon/ms-icon-144x144.png">
@@ -30,6 +30,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <!-- NE PAS TOUCHER EN HAUT -->
 <body>
 <header>
+	
 	<!-- LA BARRE DE NAVIGATION DEBUT -->
 	<nav class="navbar navbar-expand-sm justify-content-center">
 		<div class="d-flex flex-row-reverse">
@@ -51,89 +52,50 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		</div>
 	</nav>
 	<div id="navigation">
-		<ul>
+		
+        <ul>
+			<li><a href="<?php echo base_url('') ?>"><a style="margin-top:10%;" href="">L'equilibre naît de l'action.</a></li>
+			<li><a style="margin-right:9px; margin-top:10%;"href="">Qu'est ce que Mannaz ?</a></li>
+			<li><a href="<?php echo base_url('') ?>"><img id="logomid" src="<?php echo base_url(); ?>assets/img/logo-mannaz1.png"></a></li>	
+			<li><a style="margin-right:9px; margin-top:15%;"href="">Suivez-nous</a></li>
+			<li><a href="<?php echo base_url('') ?>"><img style="margin-top:10%; height: 15px; width: 15px;"id="i" src="<?php echo base_url(); ?>assets/img/i.svg"><img style="margin-top:10%;height: 15px; width: 15px; margin-left: 18px" id="f" src="<?php echo base_url(); ?>assets/img/f.svg"><img style="margin-top:10%;height: 23px; width: 25px; margin-left: 18px"id="in" src="<?php echo base_url(); ?>assets/img/in.svg"></a></li>
+			<li><input style="margin-top:15%;margin-left:25%;" id="connexion" type="button" value="Connexion">
 
-			<li><a href="">Blog</a></li>
-			<li><a href="">Qu'est ce que Mannaz ?</a></li>
-			<li><a href="">Développement personnel</a></li>
-			<li><a href="">Méthodologie</a></li>
 		</ul>
-	</div>
+		
+	
+	
 	<!-- LA BARRE DE NAVIGATION FIN -->
+
 </header>
-<div id="video">
-	<video controls>
-    <source src="\assets\img\video.png"
-            type="video/webm">
-    <source src="\assets\img\video.png"
-            type="video/mp4">
-    Sorry, your browser doesn't support embedded videos.
-</video>
+<nav role="navigation">
+  <div id="menuToggle">
+    <input type="checkbox" />
 
-<div id="exx">
-	<div style="padding-left: 13%;">
-		<p>
-			<span style="font-size: 2em;">Votre coach </span>
-			<span style="color: #FFCF4A;font-size: 2em;">Mannaz </span>
-			<span style="font-size: 2em;">2.0</span>
-		</p>
-		<p>Emplacement de texte à remplir</p>
-	</div>
-	<div class="container">
- 	 	<div class="row">
-    		<div class="col-sm">
-      			<img style="width: 300px;height: 300px;" src="\assets\img\Daniela_Verdier.png" alt="Daniela_Verdier">
-   			</div>
-   		 	<div style="margin-top: 8%; margin-right: 25%;" class="col-sm">
-				<span style="color: #FFCF4A;font-size: 2em;">Daniella Verdier  </span>
-				<br>
-				<br>
-				<p>
-				  	Fondateur de Mannaz et coach en aide à la personne, <br>
-				  	Devellopement personnel et professionnel
-				</p> 
-				<button id="qui" style="vertical-align:middle"><span>Qui suis-je </span></button>
-    		</div>
-  		</div>
-	</div>
-</div>
-<br>
-<br>
-<br>
-<br>
-<br>
-</div>
-<div id="thema">
-	<span style="font-size: 2em;">Différentes thématiques que nous pourrions </span>
-	<br>
-	<span style="font-size: 2em;">Aborder ensemble</span>
-	<p>Survolez les illustrations</p>
-	<div id="thema_img">
-		<img id="i4"src="<?php echo base_url(); ?>assets/img/4.png" alt="homme qui baille">
-		<p>Vos émotions vous submergent facilement...</p>
-		<img id="i5"src="<?php echo base_url(); ?>assets/img/5.png" alt="homme qui baille">
-		<p>Atteint d'une maladie vous avez besoin de parler...</p>
-		<img id="i6"src="<?php echo base_url(); ?>assets/img/6.png" alt="homme qui baille">
-		<p>Vous êtes bleu et c'est difficile dans la vie de tous les jours...</p>
-		<img id="i7"src="<?php echo base_url(); ?>assets/img/7.png" alt="homme qui baille">
-	</div>
+    <span></span>
+    <span></span>
+    <span></span>
 
-	<?php
-	if ($this->session->flashdata('message')) {
-		echo '<div class="alert alert-success" id="success-alert">
-                <button type="button" class="close" data-dismiss="alert">x</button>
-                <strong>' . $this->session->flashdata('message') . '</strong>
-                </div>';
-	}
-	?>
-	<?php
-	if (isset($formulaire)) {
-		echo $formulaire;
-	}
-	?>
-	<!-- LA VUE DYNAMIQUE COMMENCE ICI -->
-	<div class="container"><?php echo $page; ?></div>
-</div>
+    <ul id="menu">
+	  <a href="#"><li>Accueil</li> </a>
+	  <br> </br>
+      <a href="#"><li>Développement personnel & professionnel</li></a>
+      <a href="#"><li>Qu'est ce que Mannaz ?</li></a>
+      <a href="#"><li>Mon approche</li></a>
+     </ul>
+	</div>
+   </nav>
+<body>
+
+
+<!-- Footer -->
+
+			<!-- Grid row-->
+			
+				<!-- Grid column -->
+
+			</div>
+			<!-- Grid row-->
 
 <!-- Footer -->
 <footer class="page-footer font-small unique-color-dark prem_footer">
