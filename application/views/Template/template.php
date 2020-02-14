@@ -85,6 +85,35 @@ defined('BASEPATH') or exit('No direct script access allowed');
      </ul>
 	</div>
    </nav>
+   <div style="padding-left: 13%;">
+		<p>
+			<span style="font-size: 2em;">Votre coach </span>
+			<span style="color: blue;font-size: 2em;">Mannaz </span>
+			<span style="color: #FFCF4A;font-size: 2em;">Mannaz </span>
+			<span style="font-size: 2em;">2.0</span>
+		</p>
+		<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<p>Emplacement de texte à remplir</p>
+	</div>
+	<div class="container">
+ 	 	<div class="row">
+    		<div class="col-sm">
+      			<img style="width: 300px;height: 300px;" src="\assets\img\Daniela_Verdier.png" alt="Daniela_Verdier">
+   			</div>
+   		 	<div class="col-sm">
+      			One of three columns
+   		 	<div style="margin-top: 8%; margin-right: 25%;" class="col-sm">
+				<span style="color: #FFCF4A;font-size: 2em;">Daniella Verdier  </span>
+				<br>
+				<br>
+				<p>
+				  	Fondateur de Mannaz et coach en aide à la personne, <br>
+				  	Devellopement personnel et professionnel
+				</p> 
+				<input id="qui" type="button" value="Qui suis-je?">
+    		</div>
+  		</div>
+	</div>
 <body>
 
 
