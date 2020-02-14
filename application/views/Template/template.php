@@ -15,7 +15,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<!-- Font -->
 	<link type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat+Alternates&display=swap" rel="stylesheet">
 	<!-- FavIcon -->
-	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url(); ?>assets/favicon/logo-mannaz1.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url(); ?>assets/favicon/favicon.png">
 	<link rel="manifest" href="<?php echo base_url(); ?>assets/favicon/manifest.json">
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="<?php echo base_url(); ?>assets/favicon/ms-icon-144x144.png">
@@ -27,12 +27,30 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	}
 	?>
 </head>
-
 <!-- NE PAS TOUCHER EN HAUT -->
-
+<body>
 <header>
 	
 	<!-- LA BARRE DE NAVIGATION DEBUT -->
+	<nav class="navbar navbar-expand-sm justify-content-center">
+		<div class="d-flex flex-row-reverse">
+			<form class="form-inline md-form form-sm mt-0">
+				<span onclick="DisplaySearchBar()"><i id="searchicon" class="fa fa-search fa-lg" aria-hidden="true"></i></span>
+				<input id="searchbar" class="form-control-sm" type="text" placeholder="Search" aria-label="Search">
+			</form>
+		</div>
+		<div class="navbar-header">
+			<a class="navbar-brand" href="<?php echo base_url('') ?>"><img id="logotop" src="<?php echo base_url(); ?>assets/img/logo_mannaz_conseils.png"></a>
+		</div>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarCollapse">
+			<div class="d-flex flex-row-reverse">
+				<?php echo $navbar ?> <!-- $navbar correspond aux boutons présents à droite de la barre (ex : Se connecter ) -->
+			</div>
+		</div>
+	</nav>
 	<div id="navigation">
 		
         <ul>
@@ -78,31 +96,141 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 			</div>
 			<!-- Grid row-->
+<div id="video">
+	<video controls>
+    <source src="\assets\img\video.png"
+            type="video/webm">
+    <source src="\assets\img\video.png"
+            type="video/mp4">
+    Sorry, your browser doesn't support embedded videos.
+</video>
 
-		</div>
+<div id="exx">
+	<div style="padding-left: 13%;">
+		<p>
+			<span style="font-size: 2em;">Votre coach </span>
+			<span style="color: #FFCF4A;font-size: 2em;">Mannaz </span>
+			<span style="font-size: 2em;">2.0</span>
+		</p>
+		<p>Emplacement de texte à remplir</p>
+	</div>
+	<div class="container">
+ 	 	<div class="row">
+    		<div class="col-sm">
+      			<img style="width: 300px;height: 300px;" src="\assets\img\Daniela_Verdier.png" alt="Daniela_Verdier">
+   			</div>
+   		 	<div style="margin-top: 8%; margin-right: 25%;" class="col-sm">
+				<span style="color: #FFCF4A;font-size: 2em;">Daniella Verdier  </span>
+				<br>
+				<br>
+				<p>
+				  	Fondateur de Mannaz et coach en aide à la personne, <br>
+				  	Devellopement personnel et professionnel
+				</p> 
+				<button id="qui" style="vertical-align:middle"><span>Qui suis-je </span></button>
+    		</div>
+  		</div>
+	</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>
+<div id="thema">
+	<span style="font-size: 2em;">Différentes thématiques que nous pourrions </span>
+	<br>
+	<span style="font-size: 2em;">Aborder ensemble</span>
+	<p>Survolez les illustrations</p>
+	<div id="thema_img">
+		<img id="i4"src="<?php echo base_url(); ?>assets/img/4.png" alt="homme qui baille">
+		<p>Vos émotions vous submergent facilement...</p>
+		<img id="i5"src="<?php echo base_url(); ?>assets/img/5.png" alt="homme qui baille">
+		<p>Atteint d'une maladie vous avez besoin de parler...</p>
+		<img id="i6"src="<?php echo base_url(); ?>assets/img/6.png" alt="homme qui baille">
+		<p>Vous êtes bleu et c'est difficile dans la vie de tous les jours...</p>
+		<img id="i7"src="<?php echo base_url(); ?>assets/img/7.png" alt="homme qui baille">
 	</div>
 
+	<?php
+	if ($this->session->flashdata('message')) {
+		echo '<div class="alert alert-success" id="success-alert">
+                <button type="button" class="close" data-dismiss="alert">x</button>
+                <strong>' . $this->session->flashdata('message') . '</strong>
+                </div>';
+	}
+	?>
+	<?php
+	if (isset($formulaire)) {
+		echo $formulaire;
+	}
+	?>
+	<!-- LA VUE DYNAMIQUE COMMENCE ICI -->
+	<div class="container"><?php echo $page; ?></div>
+</div>
+
+<!-- Footer -->
+<footer class="page-footer font-small unique-color-dark prem_footer">
+
 	<!-- Footer Links -->
-	<div class="container text-center text-md-left mt-5">
+	<div class="container text-center text-md-left mt-4">
 
 		<!-- Grid row -->
 		<div class="row mt-3">
 
 			<!-- Grid column -->
-			
+			<div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+				<!-- Copyright -->
+				<p>
+					© 2018 <a href="<?php echo base_url('') ?>"> Mannaz.fr</a> par Seasons
+				</p>
+				<!-- Copyright -->
+
+			</div>
 			<!-- Grid column -->
 
+			<!-- Grid column -->
+			<div class="col-md-2 col-lg-4 col-xl-3 mx-auto mb-4">
+				<p>
+					<i class="fa fa-phone mr-3"></i>+33(0)6 18 24 67 58
+				</p>
+			</div>
+			<!-- Grid column -->
+
+			<!-- Grid column -->
+			<div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+				<p>
+					<i class="fa fa-envelope mr-3"></i> hello@mannaz.com
+				</p>
 
 			</div>
-			<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-			<br>
-			<br>
-			<br>
-			<br>
-			<input id="legal" type="button" value="Mentions légales">
+			<!-- Grid column -->
+
+			<!-- Grid column -->
+			<div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-md-0 mb-4">
+				
+
+				<!-- Links -->
+				<p>
+					<button id="legal">Mentions légales</button>
+				</p>
+				
+				
+
 			</div>
+			<!-- Grid column -->
+
 		</div>
+		<!-- Grid row -->
+
 	</div>
+	<!-- Footer Links -->
+
+
+
 </footer>
 <!-- Footer -->
 <!-- NE PAS TOUCHER EN BAS -->
@@ -119,7 +247,7 @@ if ($script != '') {
 
 <?php
 if ($this->session->flashdata('error_ins')) {
-	echo "<script>$('#myModal2').modal('show');</script>";
+	echo "<script>$('#inscriptionModal').modal('show');</script>";
 } else {
 	if ($this->session->flashdata('error_ident')) {
 		echo "<script>$('#myModal').modal('show');</script>";

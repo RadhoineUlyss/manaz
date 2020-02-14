@@ -18,9 +18,18 @@ html {
     float: left;
     text-align: center;
     width: 100%;
-	margin-right:4%;
+    margin-right:4%;
 }
-
+#searchicon{
+    margin-right:5%;
+    cursor:pointer;
+}
+#searchbar{
+    margin-left: 10px;
+    width: 100%;
+    border-radius: 20px;
+    visibility: hidden;
+}
 input:focus {
     outline:none !important;
 }
@@ -69,9 +78,8 @@ input:focus {
 	
 }
 #navigation ul li:first-child{
-    margin-left: 0%;
-	margin-right: 0%;
-	text-align: center;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 #navigation ul li:nth-child(2){
     margin-left: 2%;
@@ -94,16 +102,49 @@ input:focus {
     width: 100%;
     height: 50%;
 }
-
 #video video{
-  display: flex;
+  display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 40%;
-  border-radius: 12px;
+  width: 100%;
+  height: 50%
 }
 #exx{
     padding-top: 20px;
+}
+#qui{
+    border-radius: 24px;
+    padding: 10px 24px;
+    background-color: #FF8F71;
+    color: white;
+    border: #FF8F71;
+}
+#qui span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+#qui span:after {
+    content: '\2066\2794';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+#qui:hover span {
+    padding-right: 25px;
+  }
+  
+#qui:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+#thema{
+    padding-left: 13%;
 }
 #thema_img{
     display: flex;
@@ -124,6 +165,18 @@ input:focus {
 }
 .footerSecText{
     font-size: 0.8em;
+}
+#legal{
+    background-color: white;
+    color: black;
+    border: 2px solid #D4A829;
+    border-radius: 24px;
+    text-align: center;
+}
+#legal:hover{
+    transition: 0.2s;
+    background-color: #D4A829;
+    color: white;
 }
 .modal-login:first-child {		
     color: #636363;
