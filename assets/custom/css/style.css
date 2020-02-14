@@ -147,6 +147,18 @@ input:focus {
 .footerSecText{
     font-size: 0.8em;
 }
+#legal{
+    background-color: white;
+    color: black;
+    border: 2px solid #D4A829;
+    border-radius: 24px;
+    text-align: center;
+}
+#legal:hover{
+    transition: 0.2s;
+    background-color: #D4A829;
+    color: white;
+}
 .modal-login:first-child {		
     color: #636363;
     width: 350px;

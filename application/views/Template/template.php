@@ -110,14 +110,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<p>Survolez les illustrations</p>
 	<div id="thema_img">
 		<img id="i4"src="<?php echo base_url(); ?>assets/img/4.png" alt="homme qui baille">
-		<p>Vos émotions vous submergent facilemnt...</p>
+		<p>Vos émotions vous submergent facilement...</p>
 		<img id="i5"src="<?php echo base_url(); ?>assets/img/5.png" alt="homme qui baille">
 		<p>Atteint d'une maladie vous avez besoin de parler...</p>
 		<img id="i6"src="<?php echo base_url(); ?>assets/img/6.png" alt="homme qui baille">
 		<p>Vous êtes bleu et c'est difficile dans la vie de tous les jours...</p>
 		<img id="i7"src="<?php echo base_url(); ?>assets/img/7.png" alt="homme qui baille">
 	</div>
-	<div>
+
 	<?php
 	if ($this->session->flashdata('message')) {
 		echo '<div class="alert alert-success" id="success-alert">
@@ -138,39 +138,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <!-- Footer -->
 <footer class="page-footer font-small unique-color-dark prem_footer">
 
-	<div style="background-color: #2F2F2F;">
-		<div class="container">
-
-			<!-- Grid row-->
-			<div class="row py-4 d-flex align-items-center">
-
-				<!-- Grid column -->
-				<div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-					<h6 class="mb-0 whiteicon">Connectez-vous avec nous sur les réseaux sociaux !</h6>
-				</div>
-				<!-- Grid column -->
-
-				<!-- Grid column -->
-				<div class="col-md-6 col-lg-7 text-center text-md-right">
-
-					<!-- Facebook -->
-					<a class="fb-ic" href="#"> <i class="fa fa-facebook whiteicon mr-4"> </i> </a>
-					<!-- Twitter -->
-					<a class="tw-ic" href="#"> <i class="fa fa-twitter whiteicon mr-4"> </i> </a>
-					<!--Instagram-->
-					<a class="ins-ic" href="#"> <i class="fa fa-instagram whiteicon mr-4"> </i> </a>
-
-				</div>
-				<!-- Grid column -->
-
-			</div>
-			<!-- Grid row-->
-
-		</div>
-	</div>
-
 	<!-- Footer Links -->
-	<div class="container text-center text-md-left mt-5">
+	<div class="container text-center text-md-left mt-4">
 
 		<!-- Grid row -->
 		<div class="row mt-3">
@@ -178,60 +147,43 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			<!-- Grid column -->
 			<div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
 
-				<!-- Content -->
-				<h6 class="text-uppercase font-weight-bold">Mannaz</h6>
-				<p>Votre Solution de coaching.</p>
+				<!-- Copyright -->
+				<p>
+					© 2018 <a href="<?php echo base_url('') ?>"> Mannaz.fr</a> par Seasons
+				</p>
+				<!-- Copyright -->
 
 			</div>
 			<!-- Grid column -->
 
 			<!-- Grid column -->
-			<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-
-				<!-- Links -->
-				<h6 class="text-uppercase font-weight-bold">ongles 1</h6>
-				<p class="footerSecText">
-					<a href="<?php echo base_url('/sneakers') ?>">ongles 2</a>
+			<div class="col-md-2 col-lg-4 col-xl-3 mx-auto mb-4">
+				<p>
+					<i class="fa fa-phone mr-3"></i>+33(0)6 18 24 67 58
 				</p>
-				<p class="footerSecText">
-					<a href="#!">ongles 3</a
-				</p>
-				<p class="footerSecText">
-					<a href="#!">ongles 4</a>
-				</p>
-
 			</div>
 			<!-- Grid column -->
 
 			<!-- Grid column -->
-			<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+			<div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
 
-				<!-- Links -->
-				<h6 class="text-uppercase font-weight-bold">Liens 1</h6>
-				<p class="footerSecText">
-					<a href="#!">Liens 2</a>
-				</p>
-				<p class="footerSecText">
-					<a href="#!">Liens 3S</a>
-				</p>
-				<p class="footerSecText">
-					<a href="#!">Liens 4</a>
+				<p>
+					<i class="fa fa-envelope mr-3"></i> hello@mannaz.com
 				</p>
 
 			</div>
 			<!-- Grid column -->
 
 			<!-- Grid column -->
-			<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+			<div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-md-0 mb-4">
+				
 
 				<!-- Links -->
-				<h6 class="text-uppercase font-weight-bold">Contact</h6>
 				<p>
-					<i class="fa fa-home mr-3"></i> Aix-En-Provence 13090 FR</p>
-				<p>
-					<i class="fa fa-envelope mr-3"></i> hello@mannaz.com</p>
-				<p>
-					<i class="fa fa-phone mr-3"></i> + 33 11 11 11 11</p>
+					<button id="legal">Mentions légales</button>
+				</p>
+				
+				
 
 			</div>
 			<!-- Grid column -->
@@ -242,10 +194,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	</div>
 	<!-- Footer Links -->
 
-	<!-- Copyright -->
-	<div class="footer-copyright text-center py-3 sec_footer">© 2019 Copyright: <a href="<?php echo base_url('') ?>"> Mannaz.fr</a>
-	</div>
-	<!-- Copyright -->
+
 
 </footer>
 <!-- Footer -->
