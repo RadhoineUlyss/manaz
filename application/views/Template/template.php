@@ -116,16 +116,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	</div>
 <body>
 
-
-<!-- Footer -->
-
-			<!-- Grid row-->
-			
-				<!-- Grid column -->
-
-			</div>
-			<!-- Grid row-->
-
 <!-- Footer -->
 <footer class="page-footer font-small unique-color-dark prem_footer">
 
