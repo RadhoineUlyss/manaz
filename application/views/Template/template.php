@@ -13,9 +13,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/custom/css/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- Font -->
-	<link type="text/css" href="http://fonts.googleapis.com/css?family=Lato:300,700"/>
+	<link type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat+Alternates&display=swap" rel="stylesheet">
 	<!-- FavIcon -->
-	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url(); ?>assets/favicon/logo-mannaz1.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url(); ?>assets/favicon/favicon.png">
 	<link rel="manifest" href="<?php echo base_url(); ?>assets/favicon/manifest.json">
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="<?php echo base_url(); ?>assets/favicon/ms-icon-144x144.png">
@@ -68,7 +68,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<!-- LA BARRE DE NAVIGATION FIN -->
 
 </header>
-<nav role="navigation">
+<nav role="deroulant">
   <div id="menuToggle">
     <input type="checkbox" />
 
@@ -85,7 +85,28 @@ defined('BASEPATH') or exit('No direct script access allowed');
      </ul>
 	</div>
    </nav>
-   <div style="padding-left: 13%;">
+<body>
+
+
+<!-- Footer -->
+
+			<!-- Grid row-->
+			
+				<!-- Grid column -->
+
+			</div>
+			<!-- Grid row-->
+<div id="video">
+	<video controls>
+    <source src="\assets\img\video.png"
+            type="video/webm">
+    <source src="\assets\img\video.png"
+            type="video/mp4">
+    Sorry, your browser doesn't support embedded videos.
+</video>
+
+<div id="exx">
+	<div style="padding-left: 13%;">
 		<p>
 			<span style="font-size: 2em;">Votre coach </span>
 			<span style="color: blue;font-size: 2em;">Mannaz </span>
@@ -114,7 +135,44 @@ defined('BASEPATH') or exit('No direct script access allowed');
     		</div>
   		</div>
 	</div>
-<body>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>
+<div id="thema">
+	<span style="font-size: 2em;">Différentes thématiques que nous pourrions </span>
+	<br>
+	<span style="font-size: 2em;">Aborder ensemble</span>
+	<p>Survolez les illustrations</p>
+	<div id="thema_img">
+		<img id="i4"src="<?php echo base_url(); ?>assets/img/4.png" alt="homme qui baille">
+		<p>Vos émotions vous submergent facilement...</p>
+		<img id="i5"src="<?php echo base_url(); ?>assets/img/5.png" alt="homme qui baille">
+		<p>Atteint d'une maladie vous avez besoin de parler...</p>
+		<img id="i6"src="<?php echo base_url(); ?>assets/img/6.png" alt="homme qui baille">
+		<p>Vous êtes bleu et c'est difficile dans la vie de tous les jours...</p>
+		<img id="i7"src="<?php echo base_url(); ?>assets/img/7.png" alt="homme qui baille">
+	</div>
+
+	<?php
+	if ($this->session->flashdata('message')) {
+		echo '<div class="alert alert-success" id="success-alert">
+                <button type="button" class="close" data-dismiss="alert">x</button>
+                <strong>' . $this->session->flashdata('message') . '</strong>
+                </div>';
+	}
+	?>
+	<?php
+	if (isset($formulaire)) {
+		echo $formulaire;
+	}
+	?>
+	<!-- LA VUE DYNAMIQUE COMMENCE ICI -->
+	<div class="container"><?php echo $page; ?></div>
+</div>
 
 <!-- Footer -->
 <footer class="page-footer font-small unique-color-dark prem_footer">
