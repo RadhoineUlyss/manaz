@@ -174,6 +174,16 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<div class="container"><?php echo $page; ?></div>
 </div>
 
+<div id="news-letter">
+	<h2>INSCRIVEZ VOUS A NOTRE NEWSLETTER <br> POUR RECEVOIR PLUS D'INFORMATIONS!</h2>
+	<div class="search-container">
+    <form>
+		<input type="text">
+      	<button type="submit">OK</button>
+    </form>
+  </div>
+</div>
+
 <!-- Footer -->
 <footer class="page-footer font-small unique-color-dark prem_footer">
 
@@ -232,10 +242,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 	</div>
 	<!-- Footer Links -->
-
-<div id="news-letter">
-
-</div>
 
 </footer>
 <!-- Footer -->
