@@ -233,7 +233,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	</div>
 	<!-- Footer Links -->
 
+<div id="news-letter">
 
+</div>
 
 </footer>
 <!-- Footer -->
