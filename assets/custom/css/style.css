@@ -48,13 +48,12 @@ input:focus {
     margin-right: 2%;
 }
 #navigation{
-    background-color: white !important;
 	position:fixed;
-	width: 100%;
+	width: 400%;
     top: 0;
     text-align: center;
 	overflow: hidden;
-	display: inline
+	
 	
 	     
 }
