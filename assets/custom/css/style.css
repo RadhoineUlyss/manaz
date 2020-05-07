@@ -48,6 +48,7 @@ input:focus {
     margin-right: 2%;
 }
 #navigation{
+	background-color: white!important;
 	position:fixed;
 	width: 400%;
     top: 0;
