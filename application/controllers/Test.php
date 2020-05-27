@@ -45,12 +45,14 @@ class Test extends CI_Controller
 				'is_unique' => 'Le numero de telephone est déjà utilisé',
 			]);
 		$this->form_validation->set_rules('adresse', 'Adresse', 'trim|required|min_length[5]');
-		$this->form_validation->set_rules('postal_code', 'Code Postal', 'trim|required|integer|min_length[5]|max_length[5]');
+		$this->form_validation->set_rules('postal_code', 'Code Postal', 'trim|required|integer');
 		$this->form_validation->set_rules('ville', 'Ville', 'trim|required');
 		$this->form_validation->set_rules('password', 'Mot de passe', 'trim|required|min_length[5]');
 		$this->form_validation->set_rules('password_confirm', 'Confirmation mot de passe ', 'required|matches[password]');
+		var_dump($this->form_validation->run());
+		var_dump($this->input->post('postal_code'));
 
-		if ($this->form_validation->run()) {
+		if ($this->form_validation->run() != false) {
 			$data = [
 				'Type_User'             => $this->input->post('type_compte'),
 				'Nom_User'              => $this->input->post('nom'),
