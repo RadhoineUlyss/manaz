@@ -32,12 +32,21 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <header>
 	
 	<!-- LA BARRE DE NAVIGATION DEBUT -->
+	
+	<div id="navigation">
+		
+        <ul>
+			<li><a href="<?php echo base_url('') ?>"><a style="margin-top:10%;" href="">L'equilibre naît de l'action.</a></li>
+			<li><a href="<?php echo base_url('') ?>"><img id="logomid" src="<?php echo base_url(); ?>assets/img/logo-mannaz1.png"></a></li>	
+			<li><a style="margin-right:9px; margin-top:15%;"href="">Suivez-nous</a></li>
+	
+		
+		</ul>
+	</div>
+
 	<nav class="navbar navbar-expand-sm justify-content-center">
 		<div class="d-flex flex-row-reverse">
 			<form class="form-inline md-form form-sm mt-0">
-				<span onclick="DisplaySearchBar()"><i id="searchicon" class="fa fa-search fa-lg" aria-hidden="true"></i></span>
-				<input id="searchbar" class="form-control-sm" type="text" placeholder="Search" aria-label="Search">
-			</form>
 		</div>
 		<div class="navbar-header">
 			<a class="navbar-brand" href="<?php echo base_url('') ?>"><img id="logotop" src="<?php echo base_url(); ?>assets/img/logo-mannaz2.png"></a>
@@ -45,26 +54,18 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-		<div class="collapse navbar-collapse" id="navbarCollapse">
+		<div class="collapse navbar-collapse" id="navbarCollapse" style="margin-left: 80%;">
 			<div class="d-flex flex-row-reverse">
 				<?php echo $navbar ?> <!-- $navbar correspond aux boutons présents à droite de la barre (ex : Se connecter ) -->
 			</div>
 		</div>
 	</nav>
-	<div id="navigation">
-		
-        <ul>
-			<li><a href="<?php echo base_url('') ?>"><a style="margin-top:10%;" href="">L'equilibre naît de l'action.</a></li>
-			<li><a href="<?php echo base_url('') ?>"><img id="logomid" src="<?php echo base_url(); ?>assets/img/logo-mannaz1.png"></a></li>	
-			<li><a style="margin-right:9px; margin-top:15%;"href="">Suivez-nous</a></li>
-			<li><a href="<?php echo base_url('') ?>"><img style="margin-top:10%; height: 15px; width: 15px;"id="i" src="<?php echo base_url(); ?>assets/img/i.svg"><img style="margin-top:10%;height: 15px; width: 15px; margin-left: 18px" id="f" src="<?php echo base_url(); ?>assets/img/f.svg"><img style="margin-top:10%;height: 23px; width: 25px; margin-left: 18px"id="in" src="<?php echo base_url(); ?>assets/img/in.svg"></a></li>
-		
-		</ul>
-		
+	
 	
 	
 	<!-- LA BARRE DE NAVIGATION FIN -->
 
+<!-- MENU DEROULANT COTE -->
 </header>
 <nav role="deroulant">
   <div id="menuToggle">
